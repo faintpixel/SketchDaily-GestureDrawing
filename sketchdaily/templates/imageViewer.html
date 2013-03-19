@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sketchdaily Gesture/Figure Drawing</title>
+    <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" type="text/css" href="/static/style.css" />
+</head>
+<body>
+    <div id="photoInfo" class="well">
+        <a href="{{ image.sourceURL }}">Source</a><br/>
+        <b>Model: </b><a href="{{ image.modelURL }}">{{ image.modelName }}</a><br/>
+        <b>Photographer: </b><a href="{{ image.photographerURL }}">{{ image.photographerName }}</a><br/>
+        <b>Date Added: </b>{{ image.dateAdded }}<br/>
+    </div>
+    <div id="controls" class="well">
+        <a href="http://127.0.0.1:8000/imageViewer"><span class="icon-backward"> </span></a>
+        <a href="#" onclick="TogglePause();"><span class="icon-pause"> </span></a>
+        <a href="http://127.0.0.1:8000/"><span class="icon-stop"> </span></a>
+        <a href="http://127.0.0.1:8000/imageViewer"><span class="icon-forward"> </span></a>
+    </div>
+    <div id="timer" class="well"></div>
+    <div id="referenceImage">
+        <img id="image" src="{{ image.file.name|slice:"11:" }}"/>
+    </div>
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+<script type="text/javascript">
+    var timer;
+
+    var minutes = {{ minutes }};
+    var seconds = {{ seconds }};
+
+    var totalSeconds = minutes * 60 + seconds;
+
+    var paused = false;
+
+    $(document).ready(function(){
+        RefreshTimer();
+        timer = setTimeout('Decrement()',1000);
+
+
+        //$(expression).bind(types, keys, handler);
+        //$(expression).unbind(types, handler);
+
+        $(document).keyup(function(evt) {
+            if(evt.keyCode == 32) // spacebar
+                TogglePause();
+            else if(evt.keyCode == 37) // left
+                alert("Previous");
+            else if(evt.keyCode == 39) // right
+                alert("Next");
+            else if(evt.keyCode == 27) // right
+                Quit();
+        });
+    });
+
+    function TogglePause() {
+        paused = !paused;
+        if(paused) {
+            clearTimeout(timer)
+            $("#timer").text(minutes + ':' + String("00" + seconds).slice(-2) + " (Paused)");
+        }
+        else {
+            timer = setTimeout('Decrement()',1000);
+            RefreshTimer();
+        }
+    }
+
+    function Quit() {
+        // TO DO - confirmation
+        window.location = "http://127.0.0.1:8000/";
+    }
+
+    function Decrement() {
+        if(seconds != 0)
+            seconds -= 1;
+        else {
+            minutes -= 1;
+            seconds = 59;
+        }
+
+        RefreshTimer();
+
+        if(minutes == 0 && seconds == 0)
+            NextImage();
+        else
+            timer = setTimeout('Decrement()',1000);
+    }
+
+    function RefreshTimer() {
+        $("#timer").text(minutes + ':' + String("00" + seconds).slice(-2));
+    }
+
+    function NextImage() {
+        window.location = "http://127.0.0.1:8000/imageViewer";
+    }
+
+</script>

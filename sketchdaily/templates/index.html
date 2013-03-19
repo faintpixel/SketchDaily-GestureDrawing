@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sketchdaily Gesture/Figure Drawing</title>
+    <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+</head>
+<body>
+    <div class="container">
+
+        <h3>Full Body</h3>
+        <form action="/startSession2" method="get">
+            Gender:<br/>
+            <input type="radio" name="gender" value="Male">Male</input><br/>
+            <input type="radio" name="gender" value="Female">Female</input><br/>
+            <input type="radio" name="gender" value="">Both</input><br/>
+            <br/>
+
+            Clothing:<br/>
+            <input type="radio" name="clothing" value="Clothed">Clothed</input><br/>
+            <input type="radio" name="clothing" value="Nude">Nude</input><br/>
+            <input type="radio" name="clothing" value="">Both</input><br/>
+            <br/>
+
+            Pose:<br/>
+            <input type="radio" name="pose" value="Static">Static</input><br/>
+            <input type="radio" name="pose" value="Action">Action</input><br/>
+            <input type="radio" name="pose" value="">Both</input><br/>
+            <br/>
+
+            View:<br/>
+            <input type="radio" name="view" value="Front">Front</input><br/>
+            <input type="radio" name="view" value="Side">Side</input><br/>
+            <input type="radio" name="view" value="Back">Back</input><br/>
+            <input type="radio" name="view" value="">All</input><br/>
+            <br/>
+
+            Time:
+            <select name="time" id="time">
+                <option>30 seconds</option>
+                <option>1 minute</option>
+                <option>2 minutes</option>
+                <option>5 minutes</option>
+                <option>10 minutes</option>
+            </select>
+            <br/><br/>
+
+            <label class="checkbox">
+                <input type="checkbox" value="">
+                Group drawing session
+            </label>
+            <br/><br/>
+            <button type="submit" class="btn-primary">Start</button>
+        </form>
+    </div>
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

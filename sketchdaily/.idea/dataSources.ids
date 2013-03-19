@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?><component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Django default" product="SQLite" version="3.7.2" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" uuid="344c4965-da0a-46a6-8315-5e8d285e0da2">
+    <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+    <jdbc-url>jdbc:sqlite:D:\src\gesturedrawing\sketchdaily\skdDB.db</jdbc-url>
+    <libraries>
+      <library>
+        <url>file://$USER_HOME$/.PyCharm20/config/jdbc-drivers/xerial-sqlite-license.txt</url>
+      </library>
+      <library>
+        <url>file://$USER_HOME$/.PyCharm20/config/jdbc-drivers/sqlite-jdbc-3.7.2.jar</url>
+      </library>
+    </libraries>
+    <schema name="" catalog="" />
+    <table name="auth_group" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4" />
+      <column name="name" sqlType="VARCHAR(80)" length="2000000000" precision="10" nullable="false" jdbcType="12" />
+      <primary-key columns="id" />
+    </table>
+    <table name="auth_group_permissions" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4" />
+      <column name="group_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4" />
+      <column name="permission_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4" />
+      <primary-key columns="id" />
+      <foreign-key name="1" columns="permission_id" ref-table="auth_permission" ref-schema="" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1" />
+      <index name="auth_group_permissions_1e014c8f" unique="true" columns="permission_id" />
+      <index name="auth_group_permissions_425ae3c4" unique="true" columns="group_id" />
+    </table>
+    <table name="auth_permission" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4" />
+      <column name="name" sqlType="VARCHAR(50)" length="2000000000" precision="10" nullable="false" jdbcType="12" />
+      <column name="content_type_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4" />
+      <column name="codename" sqlType="VARCHAR(100)" length="2000000000" precision="10" nullable="false" jdbcType="12" />
+      <primary-key columns="id" />
+      <exported-key name="1" table="auth_group_permissions" schema="" catalog="" columns="permission_id" />
+      <index name="auth_permission_1bb8f392" unique="true" columns="content_type_id" />
+    </table>
+    <table name="auth_user" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4" />
+      <column name="username" sqlType="VARCHAR(30)" length="2000000000" precision="10" nullable="false" jdbcType="12" />
+      <column name="first_name" sqlType="VARCHAR(30)" length="2000000000" precision="10" nullable="false" jdbcType="12" />
+      <column name="last_name" sqlType="VARCHAR(30)" length="2000000000" precision="10" nullable="false" jdbcType="12" />
+      <column name="email" sqlType="VARCHAR(75)" length="2000000000" precision="10" nullable="false" jdbcType="12" />
+      <column name="password" sqlType="VARCHAR(128)" length="2000000000" precision="10" nullable="false" jdbcType="12" />
+      <column name="is_staff" sqlType="BOOL" length="2000000000" precision="10" nullable="false" jdbcType="12" />
+      <column name="is_active" sqlType="BOOL" length="2000000000" precision="10" nullable="false" jdbcType="12" />
+      <column name="is_superuser" sqlType="BOOL" length="2000000000" precision="10" nullable="false" jdbcType="12" />
+      <column name="last_login" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12" />
+      <column name="date_joined" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12" />
+      <primary-key columns="id" />
+    </table>
+    <table name="auth_user_groups" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4" />
+      <column name="user_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4" />
+      <column name="group_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4" />
+      <primary-key columns="id" />
+      <foreign-key name="1" columns="group_id" ref-table="auth_group" ref-schema="" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1" />
+      <index name="auth_user_groups_425ae3c4" unique="true" columns="group_id" />
+      <index name="auth_user_groups_403f60f" unique="true" columns="user_id" />
+    </table>
+    <table name="auth_user_user_permissions" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4" />
+      <column name="user_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4" />
+      <column name="permission_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4" />
+      <primary-key columns="id" />
+      <foreign-key name="1" columns="permission_id" ref-table="auth_permission" ref-schema="" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1" />
+      <index name="auth_user_user_permissions_1e014c8f" unique="true" columns="permission_id" />
+      <index name="auth_user_user_permissions_403f60f" unique="true" columns="user_id" />
+    </table>
+    <table name="django_admin_log" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4" />
+      <column name="action_time" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12" />
+      <column name="user_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4" />
+      <column name="content_type_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4" />
+      <column name="object_id" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="object_repr" sqlType="VARCHAR(200)" length="2000000000" precision="10" nullable="false" jdbcType="12" />
+      <column name="action_flag" sqlType="SMALLINT UNSIGNED" length="2000000000" precision="10" nullable="false" jdbcType="12" />
+      <column name="change_message" sqlType="TEXT" length="2000000000" precision="10" nullable="false" jdbcType="12" />
+      <primary-key columns="id" />
+      <foreign-key name="1" columns="content_type_id" ref-table="django_content_type" ref-schema="" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1" />
+      <foreign-key name="2" columns="user_id" ref-table="auth_user" ref-schema="" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1" />
+      <index name="django_admin_log_1bb8f392" unique="true" columns="content_type_id" />
+      <index name="django_admin_log_403f60f" unique="true" columns="user_id" />
+    </table>
+    <table name="django_content_type" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4" />
+      <column name="name" sqlType="VARCHAR(100)" length="2000000000" precision="10" nullable="false" jdbcType="12" />
+      <column name="app_label" sqlType="VARCHAR(100)" length="2000000000" precision="10" nullable="false" jdbcType="12" />
+      <column name="model" sqlType="VARCHAR(100)" length="2000000000" precision="10" nullable="false" jdbcType="12" />
+      <primary-key columns="id" />
+    </table>
+    <table name="django_session" schema="" catalog="" type="TABLE">
+      <column name="session_key" sqlType="VARCHAR(40)" length="2000000000" precision="10" nullable="false" jdbcType="12" />
+      <column name="session_data" sqlType="TEXT" length="2000000000" precision="10" nullable="false" jdbcType="12" />
+      <column name="expire_date" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12" />
+      <primary-key columns="session_key" />
+      <index name="django_session_3da3d3d8" unique="true" columns="expire_date" />
+    </table>
+    <table name="django_site" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4" />
+      <column name="domain" sqlType="VARCHAR(100)" length="2000000000" precision="10" nullable="false" jdbcType="12" />
+      <column name="name" sqlType="VARCHAR(50)" length="2000000000" precision="10" nullable="false" jdbcType="12" />
+      <primary-key columns="id" />
+    </table>
+  </data-source>
+</component>
