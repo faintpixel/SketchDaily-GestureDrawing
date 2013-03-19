@@ -103,7 +103,7 @@ ROOT_URLCONF = 'sketchdaily.urls'
 WSGI_APPLICATION = 'sketchdaily.wsgi.application'
 
 TEMPLATE_DIRS = (
-    "D:/src/gesturedrawing/sketchdaily/templates"
+    "D:/src/github/SketchDaily-GestureDrawing/sketchdaily/templates"
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.

@@ -11,7 +11,12 @@ def index(request):
 
 def imageViewer(request):
     image = GetNextImage(request)
-    return render_to_response('imageViewer.html', {'image': image, 'minutes': 2, 'seconds': 0}, context_instance=RequestContext(request))
+
+    splitTime = request.GET.get('time', '1:11').split(":")
+    minutes = splitTime[0]
+    seconds = splitTime[1]
+
+    return render_to_response('imageViewer.html', {'image': image, 'minutes': minutes, 'seconds': seconds}, context_instance=RequestContext(request))
 
 
 def startSession(request):

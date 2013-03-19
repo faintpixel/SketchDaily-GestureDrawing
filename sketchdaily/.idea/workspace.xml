@@ -3,22 +3,23 @@
   <component name="ChangeListManager">
     <list default="true" id="b7204516-c225-4133-874b-fa114981395e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skdDB.db" afterPath="$PROJECT_DIR$/skdDB.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sketchdaily/settings.py" afterPath="$PROJECT_DIR$/sketchdaily/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sketchdaily/views.py" afterPath="$PROJECT_DIR$/sketchdaily/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="sketchdaily.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/models.py" changelist="b7204516-c225-4133-874b-fa114981395e" time="1363722605136" ignored="false" />
-    <file path="/settings.py" changelist="b7204516-c225-4133-874b-fa114981395e" time="1363709809019" ignored="false" />
+    <file path="/settings.py" changelist="b7204516-c225-4133-874b-fa114981395e" time="1363730413933" ignored="false" />
     <file path="/admin.py" changelist="b7204516-c225-4133-874b-fa114981395e" time="1363651553618" ignored="false" />
     <file path="/urls.py" changelist="b7204516-c225-4133-874b-fa114981395e" time="1363723545025" ignored="false" />
-    <file path="/views.py" changelist="b7204516-c225-4133-874b-fa114981395e" time="1363729705150" ignored="false" />
+    <file path="/views.py" changelist="b7204516-c225-4133-874b-fa114981395e" time="1363730703367" ignored="false" />
     <file path="/imageViewer.html" changelist="b7204516-c225-4133-874b-fa114981395e" time="1363724472655" ignored="false" />
     <file path="/style.css" changelist="b7204516-c225-4133-874b-fa114981395e" time="1363713362938" ignored="false" />
-    <file path="/index.html" changelist="b7204516-c225-4133-874b-fa114981395e" time="1363725494071" ignored="false" />
-    <file path="/Django Console" changelist="b7204516-c225-4133-874b-fa114981395e" time="1363729697266" ignored="false" />
-    <file path="/Dummy.txt" changelist="b7204516-c225-4133-874b-fa114981395e" time="1363728428208" ignored="false" />
+    <file path="/index.html" changelist="b7204516-c225-4133-874b-fa114981395e" time="1363730386718" ignored="false" />
+    <file path="/Django Console" changelist="b7204516-c225-4133-874b-fa114981395e" time="1363730624529" ignored="false" />
+    <file path="/Dummy.txt" changelist="b7204516-c225-4133-874b-fa114981395e" time="1363729808722" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +57,16 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="17" selection-start="1475" selection-end="1475" vertical-scroll-proportion="-22.23077">
+            <state line="35" column="17" selection-start="1493" selection-end="1493" vertical-scroll-proportion="-9.153846">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sketchdaily/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="103" column="0" selection-start="3788" selection-end="3788" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -74,7 +84,7 @@
       <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sketchdaily/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="20" selection-start="1199" selection-end="1199" vertical-scroll-proportion="0.58274233">
+            <state line="15" column="26" selection-start="453" selection-end="453" vertical-scroll-proportion="0.34">
               <folding />
             </state>
           </provider>
@@ -108,11 +118,11 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/sketchdaily/admin.py" />
-        <option value="$PROJECT_DIR$/sketchdaily/settings.py" />
         <option value="$PROJECT_DIR$/sketchdaily/static/style.css" />
         <option value="$PROJECT_DIR$/sketchdaily/models.py" />
         <option value="$PROJECT_DIR$/sketchdaily/urls.py" />
         <option value="$PROJECT_DIR$/templates/imageViewer.html" />
+        <option value="$PROJECT_DIR$/sketchdaily/settings.py" />
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/sketchdaily/views.py" />
       </list>
@@ -363,21 +373,27 @@
       <created>1363642507395</created>
       <updated>1363642507395</updated>
     </task>
+    <task id="LOCAL-00001" summary="keeps history of images now, so it won't show you a duplicate unless it's out of images.">
+      <created>1363729811957</created>
+      <updated>1363729811957</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1288" y="-8" width="1296" height="1040" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26580226" sideWeight="0.6" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26580226" sideWeight="0.6655367" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33446327" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33446327" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -426,7 +442,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" />
+    <option name="LAST_COMMIT_MESSAGE" value="keeps history of images now, so it won't show you a duplicate unless it's out of images." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -439,6 +455,7 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+    <MESSAGE value="keeps history of images now, so it won't show you a duplicate unless it's out of images." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -498,13 +515,6 @@
         <state line="6" column="19" selection-start="176" selection-end="176" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sketchdaily/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="16" selection-start="2159" selection-end="2159" vertical-scroll-proportion="-9.68">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sketchdaily/static/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="30" column="10" selection-start="308" selection-end="308" vertical-scroll-proportion="0.0">
@@ -535,14 +545,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="17" selection-start="1475" selection-end="1475" vertical-scroll-proportion="-22.23077">
+        <state line="35" column="17" selection-start="1493" selection-end="1493" vertical-scroll-proportion="-9.153846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sketchdaily/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="103" column="0" selection-start="3788" selection-end="3788" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sketchdaily/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="20" selection-start="1199" selection-end="1199" vertical-scroll-proportion="0.58274233">
+        <state line="15" column="26" selection-start="453" selection-end="453" vertical-scroll-proportion="0.34">
           <folding />
         </state>
       </provider>
