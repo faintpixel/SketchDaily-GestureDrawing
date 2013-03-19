@@ -10,13 +10,48 @@ def index(request):
 
 
 def imageViewer(request):
-    image = GetNextImage(request)
+    minutes = request.session.get('time-minutes', 1)
+    seconds = request.session.get('time-minutes', 11)
 
-    splitTime = request.GET.get('time', '1:11').split(":")
-    minutes = splitTime[0]
-    seconds = splitTime[1]
+    action = request.GET.get('action', '')
+    if action == "rewind":
+        image = getPreviousImage(request)
+    else:
+        image = getNextImage(request)
 
     return render_to_response('imageViewer.html', {'image': image, 'minutes': minutes, 'seconds': seconds}, context_instance=RequestContext(request))
+
+
+def getNextImage(request):
+    rewoundImages = request.session.get('rewoundImages', [])
+    drawnImages = request.session.get('drawnImages', [])
+    if len(rewoundImages) > 0:
+        imageId = rewoundImages.pop()
+        image = ReferenceImage.objects.get(id=imageId)
+        drawnImages.append(image.id)
+        request.session['drawnImages'] = drawnImages
+        request.session['rewoundImages'] = rewoundImages
+    else:
+        image = GetNextImage(request)
+
+    return image
+
+
+def getPreviousImage(request):
+    rewoundImages = request.session.get('rewoundImages', [])
+    drawnImages = request.session.get('drawnImages', [])
+    if len(drawnImages) > 1:
+        currentImage = drawnImages.pop()
+        rewoundImages.append(currentImage)
+        previousId = drawnImages.pop()
+        image = ReferenceImage.objects.get(id=previousId)
+        drawnImages.append(image.id)
+        request.session['drawnImages'] = drawnImages
+        request.session['rewoundImages'] = rewoundImages
+    else:
+        image = GetNextImage(request)
+
+    return image
 
 
 def startSession(request):
@@ -26,6 +61,12 @@ def startSession(request):
     request.session['view'] = request.GET.get('view', '')
     request.session['time'] = request.GET.get('time', '')
     request.session['drawnImages'] = []
+    request.session['rewoundImages'] = []
+
+    splitTime = request.GET.get('time', '1:11').split(":")
+    request.session['time-minutes'] = splitTime[0]
+    request.session['time-seconds'] = splitTime[1]
+
     return imageViewer(request)
 
 
@@ -41,8 +82,10 @@ def GetNextImage(request):
         imagePool = imagePool.exclude(id=image)
 
     if len(imagePool) == 0:
-        drawnImages = []
+        drawnImages.pop(0)
         imagePool = ReferenceImage.objects.all()
+        for image in drawnImages:
+            imagePool = imagePool.exclude(id=image)
 
     if gender != "":
         imagePool = imagePool.filter(tags__name=gender)
