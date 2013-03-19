@@ -20,6 +20,7 @@ def startSession(request):
     request.session['pose'] = request.GET.get('pose', '')
     request.session['view'] = request.GET.get('view', '')
     request.session['time'] = request.GET.get('time', '')
+    request.session['drawnImages'] = []
     return imageViewer(request)
 
 
@@ -28,8 +29,15 @@ def GetNextImage(request):
     clothing = request.session.get('clothing', "")
     pose = request.session.get('pose', "")
     view = request.session.get('view', "")
+    drawnImages = request.session.get('drawnImages', [])
 
     imagePool = ReferenceImage.objects.all()
+    for image in drawnImages:
+        imagePool = imagePool.exclude(id=image)
+
+    if len(imagePool) == 0:
+        drawnImages = []
+        imagePool = ReferenceImage.objects.all()
 
     if gender != "":
         imagePool = imagePool.filter(tags__name=gender)
@@ -40,4 +48,7 @@ def GetNextImage(request):
     if view != "":
         imagePool = imagePool.filter(tags__name=view)
 
-    return imagePool.order_by('?')[0]
+    selectedImage = imagePool.order_by('?')[0]
+    drawnImages.append(selectedImage.id)
+    request.session['drawnImages'] = drawnImages
+    return selectedImage
