@@ -11,7 +11,7 @@ def index(request):
 
 def imageViewer(request):
     minutes = request.session.get('time-minutes', 1)
-    seconds = request.session.get('time-minutes', 11)
+    seconds = request.session.get('time-seconds', 11)
 
     action = request.GET.get('action', '')
     if action == "rewind":
