@@ -72,9 +72,9 @@
             if(evt.keyCode == 32) // spacebar
                 TogglePause();
             else if(evt.keyCode == 37) // left
-                alert("Previous");
+                PreviousImage();
             else if(evt.keyCode == 39) // right
-                alert("Next");
+                NextImage();
             else if(evt.keyCode == 27) // right
                 Quit();
         });
@@ -119,6 +119,10 @@
 
     function NextImage() {
         window.location = "http://127.0.0.1:8000/imageViewer";
+    }
+
+    function PreviousImage() {
+        window.location = "http://127.0.0.1:8000/imageViewer/?action=rewind";
     }
 
 </script>
