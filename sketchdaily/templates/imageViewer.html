@@ -16,10 +16,10 @@
                     <li>
                         <div class="btn-toolbar">
                             <div class="btn-group">
-                                <a class="btn btn-mini btn-inverse" href="http://127.0.0.1:8000/imageViewer/?action=rewind"><span class="icon-backward icon-white"> </span></a>
+                                <a class="btn btn-mini btn-inverse" href="/imageViewer/?action=rewind"><span class="icon-backward icon-white"> </span></a>
                                 <a class="btn btn-mini btn-inverse" href="#" onclick="TogglePause();"><span class="icon-pause icon-white"> </span></a>
-                                <a class="btn btn-mini btn-inverse" href="http://127.0.0.1:8000/"><span class="icon-stop icon-white"> </span></a>
-                                <a class="btn btn-mini btn-inverse" href="http://127.0.0.1:8000/imageViewer"><span class="icon-forward icon-white"> </span></a>
+                                <a class="btn btn-mini btn-inverse" href="/"><span class="icon-stop icon-white"> </span></a>
+                                <a class="btn btn-mini btn-inverse" href="/imageViewer"><span class="icon-forward icon-white"> </span></a>
                             </div>
                         </div>
                     </li>
@@ -94,7 +94,7 @@
 
     function Quit() {
         // TO DO - confirmation
-        window.location = "http://127.0.0.1:8000/";
+        window.location = "/";
     }
 
     function Decrement() {
@@ -118,11 +118,11 @@
     }
 
     function NextImage() {
-        window.location = "http://127.0.0.1:8000/imageViewer";
+        window.location = "/imageViewer";
     }
 
     function PreviousImage() {
-        window.location = "http://127.0.0.1:8000/imageViewer/?action=rewind";
+        window.location = "/imageViewer/?action=rewind";
     }
 
 </script>

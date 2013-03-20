@@ -17,7 +17,7 @@
     <file path="/style.css" changelist="b7204516-c225-4133-874b-fa114981395e" time="1363713362938" ignored="false" />
     <file path="/index.html" changelist="b7204516-c225-4133-874b-fa114981395e" time="1363730386718" ignored="false" />
     <file path="/Django Console" changelist="b7204516-c225-4133-874b-fa114981395e" time="1363734301075" ignored="false" />
-    <file path="/Dummy.txt" changelist="b7204516-c225-4133-874b-fa114981395e" time="1363801843945" ignored="false" />
+    <file path="/Dummy.txt" changelist="b7204516-c225-4133-874b-fa114981395e" time="1363801940592" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,19 +43,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="imageViewer.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="imageViewer.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/imageViewer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="45" selection-start="2793" selection-end="2793" vertical-scroll-proportion="0.5090253">
+            <state line="115" column="29" selection-start="3776" selection-end="3776" vertical-scroll-proportion="-9.538462">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="17" selection-start="1493" selection-end="1493" vertical-scroll-proportion="0.0">
+            <state line="14" column="17" selection-start="579" selection-end="579" vertical-scroll-proportion="0.4296029">
               <folding />
             </state>
           </provider>
@@ -505,12 +505,16 @@
       <created>1363801848857</created>
       <updated>1363801848857</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="connected keyboard controls for previous/next">
+      <created>1363801943006</created>
+      <updated>1363801943006</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -521,7 +525,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40677965" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32741398" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32741398" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32963374" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -570,7 +574,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="previous/next work properly now" />
+    <option name="LAST_COMMIT_MESSAGE" value="connected keyboard controls for previous/next" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -587,6 +591,7 @@
     <MESSAGE value="timer is now set based on the main page option." />
     <MESSAGE value="really crappy forward/backwards. need to re-do this." />
     <MESSAGE value="previous/next work properly now" />
+    <MESSAGE value="connected keyboard controls for previous/next" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -676,13 +681,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="17" selection-start="1493" selection-end="1493" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sketchdaily/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="99" column="0" selection-start="3630" selection-end="3630" vertical-scroll-proportion="0.0">
@@ -701,7 +699,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/imageViewer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="45" selection-start="2793" selection-end="2793" vertical-scroll-proportion="0.5090253">
+        <state line="115" column="29" selection-start="3776" selection-end="3776" vertical-scroll-proportion="-9.538462">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="17" selection-start="579" selection-end="579" vertical-scroll-proportion="0.4296029">
           <folding />
         </state>
       </provider>
