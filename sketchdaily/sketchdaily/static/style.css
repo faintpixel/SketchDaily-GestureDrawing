@@ -1,45 +1,17 @@
-html
-{
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
 body
 {
     background-color: black;
     color: slategrey;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
 
-#photoInfo
-{
-    position: absolute;
 }
-
-#controls
-{
-    position: absolute;
-    left: 340px;
+#timer{
+    color:red;
+    font-size:1.3em;
+    padding: 5px 40px;
 }
-
-#timer
-{
-    position: absolute;
-    top: 400px;
+.content{
+    margin-top:60px;
 }
+#photoInfo{
 
-#referenceImage
-{
-    height: 100%;
-    width: 100%;
-    text-align: center;
-}
-
-#image
-{
-    max-width: 100%;
-    max-height: 100%;
 }
