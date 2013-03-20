@@ -6,13 +6,6 @@
     <link rel="stylesheet" type="text/css" href="/static/style.css" />
 </head>
 <body>
-    <div id="photoInfo" class="hidden">
-        <a href="{{ image.sourceURL }}">Source</a><br/>
-        <b>Model: </b><a href="{{ image.modelURL }}">{{ image.modelName }}</a><br/>
-        <b>Photographer: </b><a href="{{ image.photographerURL }}">{{ image.photographerName }}</a><br/>
-        <b>Date Added: </b>{{ image.dateAdded }}<br/>
-    </div>
-
 
     <div id="referenceImage">
         <img id="image" src="{{ image.file.name|slice:"11:" }}"/>
@@ -30,11 +23,27 @@
                 <a class="btn btn-mini btn-inverse" href="/"><span class="icon-stop icon-white"> </span></a>
                 <a class="btn btn-mini btn-inverse" href="/imageViewer"><span class="icon-forward icon-white"> </span></a>
 
-                <a class="btn btn-mini btn-inverse" href="#" onclick=""><span class="icon-info-sign icon-white"> </span></a>
+                <a class="btn btn-mini btn-inverse" href="#" onclick="ShowImageInfo();"><span class="icon-info-sign icon-white"> </span></a>
                 <a class="btn btn-mini btn-inverse" href="#" onclick=""><span class="icon-picture icon-white"> </span></a>
                 <a class="btn btn-mini btn-inverse" href="#" onclick=""><span class="icon-globe icon-white"> </span></a>
                 <a class="btn btn-mini btn-inverse" href="#" onclick=""><span class="icon-question-sign icon-white"> </span></a>
             </div>
+        </div>
+    </div>
+
+    <div id="imageInfo" class="modal fade" role="dialog">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3>Image Info</h3>
+        </div>
+        <div class="modal-body">
+            <a href="{{ image.sourceURL }}">Source</a><br/>
+            <b>Model: </b><a href="{{ image.model.webpage }}">{{ image.model.name }}</a><br/>
+            <b>Photographer: </b><a href="{{ image.photographer.webpage }}">{{ image.photographer.name }}</a><br/>
+            <b>Date Added: </b>{{ image.dateAdded }}
+        </div>
+        <div class="modal-footer">
+            <a href="#" data-dismiss="modal" class="btn btn-primary">Close</a>
         </div>
     </div>
 
@@ -57,9 +66,7 @@
         RefreshTimer();
         timer = setTimeout('Decrement()',1000);
 
-
-        //$(expression).bind(types, keys, handler);
-        //$(expression).unbind(types, handler);
+        $("#imageInfo").on('hidden', function() { HideImageInfo(); });
 
         $(document).keyup(function(evt) {
             if(evt.keyCode == 32) // spacebar
@@ -76,13 +83,23 @@
     function TogglePause() {
         paused = !paused;
         if(paused) {
-            clearTimeout(timer)
-            $("#timer").text(minutes + ':' + String("00" + seconds).slice(-2) + " (Paused)");
+            Pause();
         }
         else {
-            timer = setTimeout('Decrement()',1000);
-            RefreshTimer();
+            Unpause();
         }
+    }
+
+    function Pause() {
+        paused = true;
+        clearTimeout(timer);
+        $("#timer").text(minutes + ':' + String("00" + seconds).slice(-2) + " (Paused)");
+    }
+
+    function Unpause() {
+        paused = false;
+        timer = setTimeout('Decrement()',1000);
+        RefreshTimer();
     }
 
     function Quit() {
@@ -116,6 +133,16 @@
 
     function PreviousImage() {
         window.location = "/imageViewer/?action=rewind";
+    }
+
+    function ShowImageInfo() {
+        Pause();
+        $("#imageInfo").modal('show');
+    }
+
+    function HideImageInfo() {
+        Unpause();
+        $("#imageInfo").modal('hide');
     }
 
 </script>
