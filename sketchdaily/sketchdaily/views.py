@@ -23,14 +23,14 @@ def imageViewer(request):
 
 
 def getNextImage(request):
-    rewoundImages = request.session.get('rewoundImages', [])
-    drawnImages = request.session.get('drawnImages', [])
-    if len(rewoundImages) > 0:
-        imageId = rewoundImages.pop()
-        image = ReferenceImage.objects.get(id=imageId)
-        drawnImages.append(image.id)
-        request.session['drawnImages'] = drawnImages
-        request.session['rewoundImages'] = rewoundImages
+    history = request.session.get('fullHistory', [])
+    historyPosition = request.session.get('historyPosition', 0)
+
+    if historyPosition != 0:
+        historyPosition += 1
+        request.session['historyPosition'] = historyPosition
+        historyIndex = len(history) + historyPosition - 1  # this is awkward
+        image = ReferenceImage.objects.get(id=history[historyIndex])
     else:
         image = GetNextImage(request)
 
@@ -38,19 +38,17 @@ def getNextImage(request):
 
 
 def getPreviousImage(request):
-    rewoundImages = request.session.get('rewoundImages', [])
-    drawnImages = request.session.get('drawnImages', [])
-    if len(drawnImages) > 1:
-        currentImage = drawnImages.pop()
-        rewoundImages.append(currentImage)
-        previousId = drawnImages.pop()
-        image = ReferenceImage.objects.get(id=previousId)
-        drawnImages.append(image.id)
-        request.session['drawnImages'] = drawnImages
-        request.session['rewoundImages'] = rewoundImages
-    else:
-        image = GetNextImage(request)
+    history = request.session.get('fullHistory', [])
+    historyPosition = request.session.get('historyPosition', 0)
+    historyPosition -= 1
 
+    historyIndex = len(history) + historyPosition - 1  # oh god what am i doing
+    if historyIndex >= 0:
+        request.session['historyPosition'] = historyPosition
+    else:
+        historyIndex = 0
+
+    image = ReferenceImage.objects.get(id=history[historyIndex])
     return image
 
 
@@ -61,7 +59,8 @@ def startSession(request):
     request.session['view'] = request.GET.get('view', '')
     request.session['time'] = request.GET.get('time', '')
     request.session['drawnImages'] = []
-    request.session['rewoundImages'] = []
+    request.session['fullHistory'] = []
+    request.session['historyPosition'] = 0
 
     splitTime = request.GET.get('time', '1:11').split(":")
     request.session['time-minutes'] = splitTime[0]
@@ -76,6 +75,7 @@ def GetNextImage(request):
     pose = request.session.get('pose', "")
     view = request.session.get('view', "")
     drawnImages = request.session.get('drawnImages', [])
+    history = request.session.get('fullHistory', [])
 
     imagePool = ReferenceImage.objects.all()
     for image in drawnImages:
@@ -98,5 +98,7 @@ def GetNextImage(request):
 
     selectedImage = imagePool.order_by('?')[0]
     drawnImages.append(selectedImage.id)
+    history.append(selectedImage.id)
     request.session['drawnImages'] = drawnImages
+    request.session['fullHistory'] = history
     return selectedImage
