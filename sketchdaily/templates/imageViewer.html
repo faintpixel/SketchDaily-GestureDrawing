@@ -6,47 +6,40 @@
     <link rel="stylesheet" type="text/css" href="/static/style.css" />
 </head>
 <body>
-<div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="navbar-inner">
-        <div class="container">
-            <a class="brand" href="#">SKD Gestures</a>
-            <div class="nav-collapse collapse">
-
-                <ul class="nav">
-                    <li>
-                        <div class="btn-toolbar">
-                            <div class="btn-group">
-                                <a class="btn btn-mini btn-inverse" href="/imageViewer/?action=rewind"><span class="icon-backward icon-white"> </span></a>
-                                <a class="btn btn-mini btn-inverse" href="#" onclick="TogglePause();"><span class="icon-pause icon-white"> </span></a>
-                                <a class="btn btn-mini btn-inverse" href="/"><span class="icon-stop icon-white"> </span></a>
-                                <a class="btn btn-mini btn-inverse" href="/imageViewer"><span class="icon-forward icon-white"> </span></a>
-                            </div>
-                        </div>
-                    </li>
-                    <li> <p id="timer" class="navbar-text"></p></li>
-                </ul>
-
-
-            </div><!--/.nav-collapse -->
-        </div>
+    <div id="photoInfo" class="hidden">
+        <a href="{{ image.sourceURL }}">Source</a><br/>
+        <b>Model: </b><a href="{{ image.modelURL }}">{{ image.modelName }}</a><br/>
+        <b>Photographer: </b><a href="{{ image.photographerURL }}">{{ image.photographerName }}</a><br/>
+        <b>Date Added: </b>{{ image.dateAdded }}<br/>
     </div>
-</div>
-<div class="content container">
+
+
     <div id="referenceImage">
-        <div id="photoInfo" class="alert alert-info">
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
-            <a href="{{ image.sourceURL }}">Source</a>
-            <b>Model: </b><a href="{{ image.model.webpage }}">{{ image.model.name }}</a><br/>
-            <b>Photographer: </b><a href="{{ image.photographer.webpage }}">{{ image.photographer.name }}</a><br/>
-            <b>Date Added: </b>{{ image.dateAdded }}<br/>
-        </div>
         <img id="image" src="{{ image.file.name|slice:"11:" }}"/>
+    </div>
+
+
+
+    <div id="controls">
+        <div class="btn-toolbar">
+            <div class="btn-group">
+                <div class="btn btn-mini btn-inverse" id="timer"></div><
+
+                <a class="btn btn-mini btn-inverse" href="/imageViewer/?action=rewind"><span class="icon-backward icon-white"> </span></a>
+                <a class="btn btn-mini btn-inverse" href="#" onclick="TogglePause();"><span class="icon-pause icon-white"> </span></a>
+                <a class="btn btn-mini btn-inverse" href="/"><span class="icon-stop icon-white"> </span></a>
+                <a class="btn btn-mini btn-inverse" href="/imageViewer"><span class="icon-forward icon-white"> </span></a>
+
+                <a class="btn btn-mini btn-inverse" href="#" onclick=""><span class="icon-info-sign icon-white"> </span></a>
+                <a class="btn btn-mini btn-inverse" href="#" onclick=""><span class="icon-picture icon-white"> </span></a>
+                <a class="btn btn-mini btn-inverse" href="#" onclick=""><span class="icon-globe icon-white"> </span></a>
+                <a class="btn btn-mini btn-inverse" href="#" onclick=""><span class="icon-question-sign icon-white"> </span></a>
+            </div>
+        </div>
     </div>
 
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="/static/bootstrap/js/bootstrap.min.js"></script>
-</div> <!-- .container -->
-
 </body>
 </html>
 
