@@ -13,11 +13,11 @@
     <file path="/admin.py" changelist="b7204516-c225-4133-874b-fa114981395e" time="1363815770594" ignored="false" />
     <file path="/urls.py" changelist="b7204516-c225-4133-874b-fa114981395e" time="1363723545025" ignored="false" />
     <file path="/views.py" changelist="b7204516-c225-4133-874b-fa114981395e" time="1363817335884" ignored="false" />
-    <file path="/imageViewer.html" changelist="b7204516-c225-4133-874b-fa114981395e" time="1363822192547" ignored="false" />
+    <file path="/imageViewer.html" changelist="b7204516-c225-4133-874b-fa114981395e" time="1363822536202" ignored="false" />
     <file path="/style.css" changelist="b7204516-c225-4133-874b-fa114981395e" time="1363820039311" ignored="false" />
     <file path="/index.html" changelist="b7204516-c225-4133-874b-fa114981395e" time="1363730386718" ignored="false" />
     <file path="/Django Console" changelist="b7204516-c225-4133-874b-fa114981395e" time="1363734301075" ignored="false" />
-    <file path="/Dummy.txt" changelist="b7204516-c225-4133-874b-fa114981395e" time="1363820155750" ignored="false" />
+    <file path="/Dummy.txt" changelist="b7204516-c225-4133-874b-fa114981395e" time="1363822244863" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +46,7 @@
       <file leaf-file-name="imageViewer.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/imageViewer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="14" selection-start="2552" selection-end="2552" vertical-scroll-proportion="1.1012956">
+            <state line="64" column="14" selection-start="3051" selection-end="3051" vertical-scroll-proportion="0.7597173">
               <folding />
             </state>
           </provider>
@@ -464,7 +464,11 @@
       <created>1363820158408</created>
       <updated>1363820158408</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="added image info popup">
+      <created>1363822246781</created>
+      <updated>1363822246781</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -529,7 +533,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="style changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="added image info popup" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -551,6 +555,7 @@
     <MESSAGE value="fixed bug with moving forward when it ran out of filtered images. also added contact model so we don't have to keep entering in the same photographer/model info for sets." />
     <MESSAGE value="fixing bug with timer" />
     <MESSAGE value="style changes" />
+    <MESSAGE value="added image info popup" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -671,7 +676,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/imageViewer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="14" selection-start="2552" selection-end="2552" vertical-scroll-proportion="1.1012956">
+        <state line="64" column="14" selection-start="3051" selection-end="3051" vertical-scroll-proportion="0.7597173">
           <folding />
         </state>
       </provider>

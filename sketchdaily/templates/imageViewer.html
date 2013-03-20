@@ -23,10 +23,10 @@
                 <a class="btn btn-mini btn-inverse" href="/"><span class="icon-stop icon-white"> </span></a>
                 <a class="btn btn-mini btn-inverse" href="/imageViewer"><span class="icon-forward icon-white"> </span></a>
 
-                <a class="btn btn-mini btn-inverse" href="#" onclick="ShowImageInfo();"><span class="icon-info-sign icon-white"> </span></a>
+                <a class="btn btn-mini btn-inverse" href="#" onclick="ShowModal('imageInfo');"><span class="icon-info-sign icon-white"> </span></a>
                 <a class="btn btn-mini btn-inverse" href="#" onclick=""><span class="icon-picture icon-white"> </span></a>
                 <a class="btn btn-mini btn-inverse" href="#" onclick=""><span class="icon-globe icon-white"> </span></a>
-                <a class="btn btn-mini btn-inverse" href="#" onclick=""><span class="icon-question-sign icon-white"> </span></a>
+                <a class="btn btn-mini btn-inverse" href="#" onclick="ShowModal('about');"><span class="icon-question-sign icon-white"> </span></a>
             </div>
         </div>
     </div>
@@ -41,6 +41,27 @@
             <b>Model: </b><a href="{{ image.model.webpage }}">{{ image.model.name }}</a><br/>
             <b>Photographer: </b><a href="{{ image.photographer.webpage }}">{{ image.photographer.name }}</a><br/>
             <b>Date Added: </b>{{ image.dateAdded }}
+        </div>
+        <div class="modal-footer">
+            <a href="#" data-dismiss="modal" class="btn btn-primary">Close</a>
+        </div>
+    </div>
+
+    <div id="about" class="modal fade" role="dialog">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3>About</h3>
+        </div>
+        <div class="modal-body">
+            <b>Left</b> - Previous image<br/>
+            <b>Right</b> - Next image<br/>
+            <b>Spacebar</b> - Pause<br/>
+            <b>Escape</b> - Stop
+            <br/>
+            <br/>
+            <a href="">Contact Us</a> to report issues or suggest improvements!<br/>
+            <br/>
+            <a href="http://reddit.com/r/sketchdaily">Visit us on reddit!</a>
         </div>
         <div class="modal-footer">
             <a href="#" data-dismiss="modal" class="btn btn-primary">Close</a>
@@ -66,7 +87,8 @@
         RefreshTimer();
         timer = setTimeout('Decrement()',1000);
 
-        $("#imageInfo").on('hidden', function() { HideImageInfo(); });
+        $("#imageInfo").on('hidden', function() { HideModal("imageInfo"); });
+        $("#about").on('hidden', function() { HideModal("about"); });
 
         $(document).keyup(function(evt) {
             if(evt.keyCode == 32) // spacebar
@@ -135,14 +157,14 @@
         window.location = "/imageViewer/?action=rewind";
     }
 
-    function ShowImageInfo() {
+    function ShowModal(name) {
         Pause();
-        $("#imageInfo").modal('show');
+        $("#" + name).modal('show');
     }
 
-    function HideImageInfo() {
+    function HideModal(name) {
         Unpause();
-        $("#imageInfo").modal('hide');
+        $("#" + name).modal('hide');
     }
 
 </script>
