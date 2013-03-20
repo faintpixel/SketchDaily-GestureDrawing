@@ -36,8 +36,8 @@
         <div id="photoInfo" class="alert alert-info">
             <button type="button" class="close" data-dismiss="alert">&times;</button>
             <a href="{{ image.sourceURL }}">Source</a>
-            <b>Model: </b><a href="{{ image.modelURL }}">{{ image.modelName }}</a><br/>
-            <b>Photographer: </b><a href="{{ image.photographerURL }}">{{ image.photographerName }}</a><br/>
+            <b>Model: </b><a href="{{ image.model.webpage }}">{{ image.model.name }}</a><br/>
+            <b>Photographer: </b><a href="{{ image.photographer.webpage }}">{{ image.photographer.name }}</a><br/>
             <b>Date Added: </b>{{ image.dateAdded }}<br/>
         </div>
         <img id="image" src="{{ image.file.name|slice:"11:" }}"/>

@@ -32,7 +32,7 @@ def getNextImage(request):
         historyIndex = len(history) + historyPosition - 1  # this is awkward
         image = ReferenceImage.objects.get(id=history[historyIndex])
     else:
-        image = GetNextImage(request)
+        image = getNextImageForSession(request)
 
     return image
 
@@ -69,7 +69,7 @@ def startSession(request):
     return imageViewer(request)
 
 
-def GetNextImage(request):
+def getNextImageForSession(request):
     gender = request.session.get('gender', "")
     clothing = request.session.get('clothing', "")
     pose = request.session.get('pose', "")
@@ -78,15 +78,6 @@ def GetNextImage(request):
     history = request.session.get('fullHistory', [])
 
     imagePool = ReferenceImage.objects.all()
-    for image in drawnImages:
-        imagePool = imagePool.exclude(id=image)
-
-    if len(imagePool) == 0:
-        drawnImages.pop(0)
-        imagePool = ReferenceImage.objects.all()
-        for image in drawnImages:
-            imagePool = imagePool.exclude(id=image)
-
     if gender != "":
         imagePool = imagePool.filter(tags__name=gender)
     if clothing != "":
@@ -96,7 +87,17 @@ def GetNextImage(request):
     if view != "":
         imagePool = imagePool.filter(tags__name=view)
 
-    selectedImage = imagePool.order_by('?')[0]
+    filteredImagePool = imagePool
+    for image in drawnImages:
+        filteredImagePool = filteredImagePool.exclude(id=image)
+
+    if len(filteredImagePool) == 0:
+        drawnImages.pop(0)  # once we have more images we can probably drop this and just clear the whole drawnImages list
+        filteredImagePool = imagePool
+        for image in drawnImages:
+            filteredImagePool = filteredImagePool.exclude(id=image)
+
+    selectedImage = filteredImagePool.order_by('?')[0]
     drawnImages.append(selectedImage.id)
     history.append(selectedImage.id)
     request.session['drawnImages'] = drawnImages
