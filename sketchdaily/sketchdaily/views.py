@@ -30,7 +30,7 @@ def getNextImage(request):
         historyPosition += 1
         request.session['historyPosition'] = historyPosition
         historyIndex = len(history) + historyPosition - 1  # this is awkward
-        image = ReferenceImage.objects.get(id=history[historyIndex])
+        image = FullBodyReference.objects.get(id=history[historyIndex])
     else:
         image = getNextImageForSession(request)
 
@@ -48,7 +48,7 @@ def getPreviousImage(request):
     else:
         historyIndex = 0
 
-    image = ReferenceImage.objects.get(id=history[historyIndex])
+    image = FullBodyReference.objects.get(id=history[historyIndex])
     return image
 
 
@@ -77,15 +77,15 @@ def getNextImageForSession(request):
     drawnImages = request.session.get('drawnImages', [])
     history = request.session.get('fullHistory', [])
 
-    imagePool = ReferenceImage.objects.all()
+    imagePool = FullBodyReference.objects.all()
     if gender != "":
-        imagePool = imagePool.filter(tags__name=gender)
+        imagePool = imagePool.filter(gender=gender)
     if clothing != "":
-        imagePool = imagePool.filter(tags__name=clothing)
+        imagePool = imagePool.filter(clothing=clothing)
     if pose != "":
-        imagePool = imagePool.filter(tags__name=pose)
+        imagePool = imagePool.filter(pose=pose)
     if view != "":
-        imagePool = imagePool.filter(tags__name=view)
+        imagePool = imagePool.filter(view=view)
 
     filteredImagePool = imagePool
     for image in drawnImages:
