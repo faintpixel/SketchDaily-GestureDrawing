@@ -15,7 +15,7 @@
     <file path="/style.css" changelist="b7204516-c225-4133-874b-fa114981395e" time="1363820039311" ignored="false" />
     <file path="/index.html" changelist="b7204516-c225-4133-874b-fa114981395e" time="1364507755535" ignored="false" />
     <file path="/Django Console" changelist="b7204516-c225-4133-874b-fa114981395e" time="1363734301075" ignored="false" />
-    <file path="/Dummy.txt" changelist="b7204516-c225-4133-874b-fa114981395e" time="1364508053885" ignored="false" />
+    <file path="/Dummy.txt" changelist="b7204516-c225-4133-874b-fa114981395e" time="1364508075729" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -240,7 +240,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="options.lastSelected" value="vcs.Subversion" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="dynamic.classpath" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -391,6 +391,7 @@
     <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
     <option name="FORCE_UPDATE" value="false" />
     <option name="IGNORE_EXTERNALS" value="false" />
+    <configuration useDefault="true">C:\Users\mmkif_000\AppData\Roaming\Subversion</configuration>
     <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
   </component>
   <component name="TaskManager">
@@ -443,7 +444,11 @@
       <created>1364508066281</created>
       <updated>1364508066281</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="reworked the tagging to make it a bit more standardized. should be easy to add animals/body parts now too.">
+      <created>1364508080945</created>
+      <updated>1364508080945</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
