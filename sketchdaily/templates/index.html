@@ -56,6 +56,8 @@
                         Group drawing session
                     </label>
                     <br/><br/>
+
+                    <input type="hidden" name="imageType" value="fullBodies"/>
                     <button type="submit" class="btn-primary">Start</button>
                 </form>
             </div>
@@ -103,6 +105,8 @@
                         Group drawing session
                     </label>
                     <br/><br/>
+
+                    <input type="hidden" name="imageType" value="bodyParts"/>
                     <button type="submit" class="btn-primary">Start</button>
                 </form>
             </div>
@@ -115,12 +119,12 @@
             <div class="tab-pane" id="animals">
                 <form action="/startSession" method="get">
                     Type:<br/>
-                    <input type="radio" name="type" value="1">Bird</input><br/>
-                    <input type="radio" name="type" value="2">Fish</input><br/>
-                    <input type="radio" name="type" value="3">Reptile/Amphibian</input><br/>
-                    <input type="radio" name="type" value="4">Bug</input><br/>
-                    <input type="radio" name="type" value="5">Mammal</input><br/>
-                    <input type="radio" name="type" value="" checked="checked">All</input><br/>
+                    <input type="radio" name="species" value="1">Bird</input><br/>
+                    <input type="radio" name="species" value="2">Fish</input><br/>
+                    <input type="radio" name="species" value="3">Reptile/Amphibian</input><br/>
+                    <input type="radio" name="species" value="4">Bug</input><br/>
+                    <input type="radio" name="species" value="5">Mammal</input><br/>
+                    <input type="radio" name="species" value="" checked="checked">All</input><br/>
                     <br/>
 
                     View:<br/>
@@ -145,6 +149,8 @@
                         Group drawing session
                     </label>
                     <br/><br/>
+
+                    <input type="hidden" name="imageType" value="animals"/>
                     <button type="submit" class="btn-primary">Start</button>
                 </form>
 

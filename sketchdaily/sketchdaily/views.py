@@ -53,10 +53,8 @@ def getPreviousImage(request):
 
 
 def startSession(request):
-    request.session['gender'] = request.GET.get('gender', '')
-    request.session['clothing'] = request.GET.get('clothing', '')
-    request.session['pose'] = request.GET.get('pose', '')
-    request.session['view'] = request.GET.get('view', '')
+    imageType = request.GET.get('imageType', '')
+    request.session['imageType'] = imageType
     request.session['time'] = request.GET.get('time', '')
     request.session['drawnImages'] = []
     request.session['fullHistory'] = []
@@ -66,26 +64,45 @@ def startSession(request):
     request.session['time-minutes'] = splitTime[0]
     request.session['time-seconds'] = splitTime[1]
 
+    if imageType == 'animals':
+        imagePool = startAnimalSession(request)
+    elif imageType == 'bodyParts':
+        imagePool = startBodyPartSession(request)
+    else:
+        imagePool = startFullBodySession(request)
+
     return imageViewer(request)
 
 
+def startFullBodySession(request):
+    request.session['gender'] = request.GET.get('gender', '')
+    request.session['clothing'] = request.GET.get('clothing', '')
+    request.session['pose'] = request.GET.get('pose', '')
+    request.session['view'] = request.GET.get('view', '')
+
+
+def startBodyPartSession(request):
+    request.session['view'] = request.GET.get('view', '')
+    request.session['gender'] = request.GET.get('gender', '')
+    request.session['bodyPart'] = request.GET.get('bodyPart', '')
+
+
+def startAnimalSession(request):
+    request.session['view'] = request.GET.get('view', '')
+    request.session['species'] = request.GET.get('species', '')
+
+
 def getNextImageForSession(request):
-    gender = request.session.get('gender', "")
-    clothing = request.session.get('clothing', "")
-    pose = request.session.get('pose', "")
-    view = request.session.get('view', "")
     drawnImages = request.session.get('drawnImages', [])
     history = request.session.get('fullHistory', [])
+    imageType = request.session.get('imageType', '')
 
-    imagePool = FullBodyReference.objects.all()
-    if gender != "":
-        imagePool = imagePool.filter(gender=gender)
-    if clothing != "":
-        imagePool = imagePool.filter(clothing=clothing)
-    if pose != "":
-        imagePool = imagePool.filter(pose=pose)
-    if view != "":
-        imagePool = imagePool.filter(view=view)
+    if imageType == 'animals':
+        imagePool = getAnimalReference(request)
+    elif imageType == 'bodyParts':
+        imagePool = getBodyPartReference(request)
+    else:
+        imagePool = getFullBodyReference(request)
 
     filteredImagePool = imagePool
     for image in drawnImages:
@@ -103,3 +120,51 @@ def getNextImageForSession(request):
     request.session['drawnImages'] = drawnImages
     request.session['fullHistory'] = history
     return selectedImage
+
+
+def getFullBodyReference(request):
+    gender = request.session.get('gender', "")
+    clothing = request.session.get('clothing', "")
+    pose = request.session.get('pose', "")
+    view = request.session.get('view', "")
+
+    imagePool = FullBodyReference.objects.all()
+    if gender != "":
+        imagePool = imagePool.filter(gender=gender)
+    if clothing != "":
+        imagePool = imagePool.filter(clothing=clothing)
+    if pose != "":
+        imagePool = imagePool.filter(pose=pose)
+    if view != "":
+        imagePool = imagePool.filter(view=view)
+
+    return imagePool
+
+
+def getAnimalReference(request):
+    view = request.session.get('view', "")
+    species = request.session.get('species', "")
+
+    imagePool = AnimalReference.objects.all()
+    if view != "":
+        imagePool = imagePool.filter(view=view)
+    if species != "":
+        imagePool = imagePool.filter(species=species)
+
+    return imagePool
+
+
+def getBodyPartReference(request):
+    view = request.session.get('view', "")
+    gender = request.session.get('gender', "")
+    bodyPart = request.session.get('bodyPart', "")
+
+    imagePool = BodyPartReference.objects.all()
+    if view != "":
+        imagePool = imagePool.filter(view=view)
+    if gender != "":
+        imagePool = imagePool.filter(gender=gender)
+    if bodyPart != "":
+        imagePool = imagePool.filter(bodyPart=bodyPart)
+
+    return imagePool
