@@ -5,9 +5,8 @@
     <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
 </head>
 <body>
+<img src="/static/skd.jpg"/>
     <div class="container">
-        <img src="/static/skd.jpg"/><br/>
-
         <ul class="nav nav-tabs" id="myTab">
             <li class="active"><a href="#fullBody" data-toggle="tab">Full Body</a></li>
             <li><a href="#bodyParts" data-toggle="tab">Body Parts</a></li>
@@ -16,30 +15,30 @@
 
         <div class="tab-content">
             <div class="tab-pane active" id="fullBody">
-                <form action="/startSession2" method="get">
+                <form action="/startSession" method="get">
                     Gender:<br/>
                     <input type="radio" name="gender" value="1">Male</input><br/>
                     <input type="radio" name="gender" value="2">Female</input><br/>
-                    <input type="radio" name="gender" value="">Both</input><br/>
+                    <input type="radio" name="gender" value="" checked="checked">Both</input><br/>
                     <br/>
 
                     Clothing:<br/>
                     <input type="radio" name="clothing" value="1">Clothed</input><br/>
                     <input type="radio" name="clothing" value="2">Nude</input><br/>
-                    <input type="radio" name="clothing" value="">Both</input><br/>
+                    <input type="radio" name="clothing" value="" checked="checked">Both</input><br/>
                     <br/>
 
                     Pose:<br/>
                     <input type="radio" name="pose" value="1">Action</input><br/>
                     <input type="radio" name="pose" value="2">Stationary</input><br/>
-                    <input type="radio" name="pose" value="">Both</input><br/>
+                    <input type="radio" name="pose" value="" checked="checked">Both</input><br/>
                     <br/>
 
                     View:<br/>
                     <input type="radio" name="view" value="1">Front</input><br/>
                     <input type="radio" name="view" value="2">Side</input><br/>
                     <input type="radio" name="view" value="3">Back</input><br/>
-                    <input type="radio" name="view" value="">All</input><br/>
+                    <input type="radio" name="view" value="" checked="checked">All</input><br/>
                     <br/>
 
                     Time:
@@ -60,8 +59,96 @@
                     <button type="submit" class="btn-primary">Start</button>
                 </form>
             </div>
-            <div class="tab-pane" id="bodyParts">b</div>
-            <div class="tab-pane" id="animals">c</div>
+
+
+
+
+
+
+
+            <div class="tab-pane" id="bodyParts">
+                <form action="/startSession" method="get">
+                    Part:<br/>
+                    <input type="radio" name="part" value="1">Hands</input><br/>
+                    <input type="radio" name="part" value="2">Feet</input><br/>
+                    <input type="radio" name="part" value="3">Heads</input><br/>
+                    <input type="radio" name="part" value="" checked="checked">All</input><br/>
+                    <br/>
+
+                    Gender:<br/>
+                    <input type="radio" name="gender" value="1">Male</input><br/>
+                    <input type="radio" name="gender" value="2">Female</input><br/>
+                    <input type="radio" name="gender" value="" checked="checked">Both</input><br/>
+                    <br/>
+
+                    View:<br/>
+                    <input type="radio" name="view" value="1">Front</input><br/>
+                    <input type="radio" name="view" value="2">Side</input><br/>
+                    <input type="radio" name="view" value="3">Back</input><br/>
+                    <input type="radio" name="view" value="" checked="checked">All</input><br/>
+                    <br/>
+
+                    Time:
+                    <select name="time" id="time">
+                        <option value="0:30">30 seconds</option>
+                        <option value="1:00">1 minute</option>
+                        <option value="2:00">2 minutes</option>
+                        <option value="5:00">5 minutes</option>
+                        <option value="10:00">10 minutes</option>
+                    </select>
+                    <br/><br/>
+
+                    <label class="checkbox">
+                        <input type="checkbox" value="">
+                        Group drawing session
+                    </label>
+                    <br/><br/>
+                    <button type="submit" class="btn-primary">Start</button>
+                </form>
+            </div>
+
+
+
+
+
+
+            <div class="tab-pane" id="animals">
+                <form action="/startSession" method="get">
+                    Type:<br/>
+                    <input type="radio" name="type" value="1">Bird</input><br/>
+                    <input type="radio" name="type" value="2">Fish</input><br/>
+                    <input type="radio" name="type" value="3">Reptile/Amphibian</input><br/>
+                    <input type="radio" name="type" value="4">Bug</input><br/>
+                    <input type="radio" name="type" value="5">Mammal</input><br/>
+                    <input type="radio" name="type" value="" checked="checked">All</input><br/>
+                    <br/>
+
+                    View:<br/>
+                    <input type="radio" name="view" value="1">Front</input><br/>
+                    <input type="radio" name="view" value="2">Side</input><br/>
+                    <input type="radio" name="view" value="3">Back</input><br/>
+                    <input type="radio" name="view" value="" checked="checked">All</input><br/>
+                    <br/>
+
+                    Time:
+                    <select name="time" id="time">
+                        <option value="0:30">30 seconds</option>
+                        <option value="1:00">1 minute</option>
+                        <option value="2:00">2 minutes</option>
+                        <option value="5:00">5 minutes</option>
+                        <option value="10:00">10 minutes</option>
+                    </select>
+                    <br/><br/>
+
+                    <label class="checkbox">
+                        <input type="checkbox" value="">
+                        Group drawing session
+                    </label>
+                    <br/><br/>
+                    <button type="submit" class="btn-primary">Start</button>
+                </form>
+
+            </div>
         </div>
 
 
