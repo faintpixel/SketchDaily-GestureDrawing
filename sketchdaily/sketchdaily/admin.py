@@ -1,7 +1,14 @@
 from django.contrib import admin
 from sketchdaily.models import *
 
-admin.site.register(ReferenceImage)
+class ReferenceImageAdmin(admin.ModelAdmin):
+    list_display = ('thumbnail', 'file')
+    list_per_page = 15
+    list_max_show_all = 30
+    pass
+
+
+admin.site.register(ReferenceImage, ReferenceImageAdmin)
 admin.site.register(FullBodyReference)
 admin.site.register(AnimalReference)
 admin.site.register(BodyPartReference)

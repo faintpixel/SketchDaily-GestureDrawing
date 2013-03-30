@@ -40,9 +40,19 @@ class ReferenceImage(models.Model):
     photographer = models.ForeignKey('Contact', related_name='photographer', blank=True, null=True)
     model = models.ForeignKey('Contact', related_name='model', blank=True, null=True)
     dateAdded = models.DateTimeField(auto_now=True)
+    nudity = models.BooleanField()
 
     def __unicode__(self):
         return self.file.name
+
+    def thumbnail(self):
+        imageLink = u"http://reference.sketchdaily.net" + self.file.url[11:]
+        if self.file:
+            return u'<img style="width: 125px; height:125px;" src="%s" />' % imageLink
+        else:
+            return '(no thumbnail)'
+    thumbnail.short_description = 'Thumbnail'
+    thumbnail.allow_tags = True
 
 
 class FullBodyReference(models.Model):
