@@ -41,11 +41,15 @@
                     <br/>
 
                     Clothing:<br/>
-                    <select name="clothing">
+                    <select id="clothing" name="clothing">
                         <option value="">Both</option>
                         <option value="1">Clothed</option>
                         <option value="2">Nude</option>
                     </select>
+                    <br/>
+                    <div id="showNSFWdiv" class="hidden">
+                        <input type="checkbox" id="showNSFW" name="showNSFW" value="1"> Include NSFW images
+                    </div>
                     <br/>
                     Pose:<br/>
                     <select name="pose">
@@ -203,3 +207,21 @@
     <script src="/static/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
+
+<script type="text/javascript">
+
+    $(document).ready(function(){
+        ShowOrHideNSFWDiv();
+        $('#clothing').change(function() {
+            ShowOrHideNSFWDiv();
+        });
+    });
+
+    function ShowOrHideNSFWDiv() {
+        var clothingValue = $("#clothing").val();
+        if(clothingValue == "1")
+            $("#showNSFWdiv").removeClass("hidden");
+        else
+            $("#showNSFWdiv").addClass("hidden");
+    }
+</script>

@@ -1,7 +1,6 @@
 MUST DO
 -------
 [ ] move db pw to a seperate file and add that file to git ignore
-[ ] add checkbox for 'Show NSFW images'
 [ ] Add option for a user specified delay between images after the timer reaches 0
 [ ] give users the ability to mark an image as tagged incorrectly
 [ ] group drawing sessions

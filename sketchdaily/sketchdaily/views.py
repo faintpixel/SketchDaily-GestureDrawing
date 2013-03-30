@@ -79,6 +79,7 @@ def startFullBodySession(request):
     request.session['clothing'] = request.GET.get('clothing', '')
     request.session['pose'] = request.GET.get('pose', '')
     request.session['view'] = request.GET.get('view', '')
+    request.session['showNSFW'] = request.GET.get('showNSFW', False)
 
 
 def startBodyPartSession(request):
@@ -127,16 +128,21 @@ def getFullBodyReference(request):
     clothing = request.session.get('clothing', "")
     pose = request.session.get('pose', "")
     view = request.session.get('view', "")
+    showNSFW = request.session.get('showNSFW', False)
 
     imagePool = FullBodyReference.objects.all()
     if gender != "":
         imagePool = imagePool.filter(gender=gender)
     if clothing != "":
         imagePool = imagePool.filter(clothing=clothing)
+        if clothing == "1":
+            if showNSFW == False:
+                imagePool = imagePool.filter(image__nudity=False)
     if pose != "":
         imagePool = imagePool.filter(pose=pose)
     if view != "":
         imagePool = imagePool.filter(view=view)
+
 
     return imagePool
 
