@@ -1,0 +1,18 @@
+MUST DO
+-------
+[ ] move db pw to a seperate file and add that file to git ignore
+[ ] add checkbox for 'Show NSFW images'
+[ ] Add option for a user specified delay between images after the timer reaches 0
+[ ] give users the ability to mark an image as tagged incorrectly
+[ ] group drawing sessions
+[ ] hide django error messages and switch it to a generic one while logging the actual errors
+[ ] option to hide the timer
+
+MAYBE DO
+--------
+[ ] search by photographer/model
+[ ] play sound when timer is almost done or flash the timer or something
+
+DO LATER
+--------
+[ ] Let users submit links to their drawings
