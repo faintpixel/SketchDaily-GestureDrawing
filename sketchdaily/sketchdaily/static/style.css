@@ -1,6 +1,5 @@
 html
 {
-    height: 100%;
     margin: 0;
     padding: 0;
 }
@@ -11,9 +10,10 @@ body
     color: slategrey;
     margin: 0;
     padding: 0;
-    height: 100%;
 }
-
+#homediv{
+    padding-top:60px;
+}
 #photoInfo
 {
     position: absolute;
@@ -31,20 +31,15 @@ body
 
 #referenceImage
 {
-    height: 100%;
     width: 100%;
     text-align: center;
+    margin-top:60px;
 }
 
 #image
 {
     max-width: 100%;
-    max-height: 100%;
+    max-height: 90%;
 }
 
-#controls
-{
-    position: absolute;
-    top: 0px;
-    left: 5px;
-}
+

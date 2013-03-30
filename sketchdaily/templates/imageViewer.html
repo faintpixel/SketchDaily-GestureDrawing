@@ -6,30 +6,37 @@
     <link rel="stylesheet" type="text/css" href="/static/style.css" />
 </head>
 <body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="/">r/SketchDaily References</a>
+            <div id="controls" class="pull-right">
+                <div class="btn-toolbar">
+                    <div class="btn-group">
+                        <a href="#" class="btn btn-mini btn-inverse disabled" id="timer"></a>
 
-    <div id="referenceImage">
-        <img id="image" src="{{ image.image.file.name|slice:"11:" }}"/>
-    </div>
-
-
-
-    <div id="controls">
-        <div class="btn-toolbar">
-            <div class="btn-group">
-                <div class="btn btn-mini btn-inverse" id="timer"></div><
-
-                <a class="btn btn-mini btn-inverse" href="/imageViewer/?action=rewind"><span class="icon-backward icon-white"> </span></a>
-                <a class="btn btn-mini btn-inverse" href="#" onclick="TogglePause();"><span class="icon-pause icon-white"> </span></a>
-                <a class="btn btn-mini btn-inverse" href="/"><span class="icon-stop icon-white"> </span></a>
-                <a class="btn btn-mini btn-inverse" href="/imageViewer"><span class="icon-forward icon-white"> </span></a>
-
-                <a class="btn btn-mini btn-inverse" href="#" onclick="ShowModal('imageInfo');"><span class="icon-info-sign icon-white"> </span></a>
-                <a class="btn btn-mini btn-inverse" href="#" onclick=""><span class="icon-picture icon-white"> </span></a>
-                <a class="btn btn-mini btn-inverse" href="#" onclick=""><span class="icon-globe icon-white"> </span></a>
-                <a class="btn btn-mini btn-inverse" href="#" onclick="ShowModal('about');"><span class="icon-question-sign icon-white"> </span></a>
+                        <a class="btn btn-mini btn-inverse" href="/imageViewer/?action=rewind"><span class="icon-backward icon-white"> </span></a>
+                        <a class="btn btn-mini btn-inverse" href="#" onclick="TogglePause();"><span class="icon-pause icon-white"> </span></a>
+                        <a class="btn btn-mini btn-inverse" href="/"><span class="icon-stop icon-white"> </span></a>
+                        <a class="btn btn-mini btn-inverse" href="/imageViewer"><span class="icon-forward icon-white"> </span></a>
+                        <a class="btn btn-mini btn-inverse" href="#" onclick="ShowModal('imageInfo');"><span class="icon-info-sign icon-white"> </span></a>
+                        <a class="btn btn-mini btn-inverse" href="#" onclick=""><span class="icon-picture icon-white"> </span></a>
+                        <a class="btn btn-mini btn-inverse" href="#" onclick=""><span class="icon-globe icon-white"> </span></a>
+                        <a class="btn btn-mini btn-inverse" href="#" onclick="ShowModal('about');"><span class="icon-question-sign icon-white"> </span></a>
+                    </div>
+                </div>
             </div>
         </div>
+
     </div>
+</div>
+    <div id="referenceImage">
+        <img id="image" src="http://reference.sketchdaily.net/{{ image.image.file.name|slice:"11:" }}"/>
+    </div>
+
+
+
+
 
     <div id="imageInfo" class="modal fade" role="dialog">
         <div class="modal-header">
