@@ -17,7 +17,10 @@ def imageViewer(request):
     if action == "rewind":
         image = getPreviousImage(request)
     else:
-        image = getNextImage(request)
+        try:
+            image = getNextImage(request)
+        except Exception:
+            return render_to_response('error.html', {'message': "No images found matching your criteria."})
 
     return render_to_response('imageViewer.html', {'image': image, 'minutes': minutes, 'seconds': seconds}, context_instance=RequestContext(request))
 
@@ -33,6 +36,7 @@ def getNextImage(request):
         image = FullBodyReference.objects.get(id=history[historyIndex])
     else:
         image = getNextImageForSession(request)
+
 
     return image
 
@@ -108,6 +112,9 @@ def getNextImageForSession(request):
     filteredImagePool = imagePool
     for image in drawnImages:
         filteredImagePool = filteredImagePool.exclude(id=image)
+
+    if len(imagePool) == 0:
+        raise Exception('No images match selected criteria.')
 
     if len(filteredImagePool) == 0:
         drawnImages.pop(0)  # once we have more images we can probably drop this and just clear the whole drawnImages list

@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b7204516-c225-4133-874b-fa114981395e" name="Default" comment="added better nsfw filtering since some clothed reference pictures still have nudity">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sketchdaily/static/background.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sketchdaily/admin.py" afterPath="$PROJECT_DIR$/sketchdaily/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/imageViewer.html" afterPath="$PROJECT_DIR$/templates/imageViewer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sketchdaily/models.py" afterPath="$PROJECT_DIR$/sketchdaily/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sketchdaily/settings.py" afterPath="$PROJECT_DIR$/sketchdaily/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sketchdaily/static/style.css" afterPath="$PROJECT_DIR$/sketchdaily/static/style.css" />
+    <list default="true" id="b7204516-c225-4133-874b-fa114981395e" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/error.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sketchdaily/views.py" afterPath="$PROJECT_DIR$/sketchdaily/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="sketchdaily.iws" />
@@ -17,13 +12,14 @@
     <file path="/settings.py" changelist="b7204516-c225-4133-874b-fa114981395e" time="1364838257556" ignored="false" />
     <file path="/admin.py" changelist="b7204516-c225-4133-874b-fa114981395e" time="1364849148446" ignored="false" />
     <file path="/urls.py" changelist="b7204516-c225-4133-874b-fa114981395e" time="1363723545025" ignored="false" />
-    <file path="/views.py" changelist="b7204516-c225-4133-874b-fa114981395e" time="1364683179723" ignored="false" />
+    <file path="/views.py" changelist="b7204516-c225-4133-874b-fa114981395e" time="1365535157992" ignored="false" />
     <file path="/imageViewer.html" changelist="b7204516-c225-4133-874b-fa114981395e" time="1364838236176" ignored="false" />
     <file path="/style.css" changelist="b7204516-c225-4133-874b-fa114981395e" time="1364684287354" ignored="false" />
     <file path="/index.html" changelist="b7204516-c225-4133-874b-fa114981395e" time="1364684208128" ignored="false" />
     <file path="/Django Console" changelist="b7204516-c225-4133-874b-fa114981395e" time="1364849660202" ignored="false" />
-    <file path="/Dummy.txt" changelist="b7204516-c225-4133-874b-fa114981395e" time="1365534314397" ignored="false" />
+    <file path="/Dummy.txt" changelist="b7204516-c225-4133-874b-fa114981395e" time="1365534347103" ignored="false" />
     <file path="/todo.txt" changelist="b7204516-c225-4133-874b-fa114981395e" time="1364665093162" ignored="false" />
+    <file path="/error.html" changelist="b7204516-c225-4133-874b-fa114981395e" time="1365534964395" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +57,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="22" selection-start="274" selection-end="286" vertical-scroll-proportion="0.0">
+            <state line="18" column="25" selection-start="0" selection-end="8260" vertical-scroll-proportion="-7.1923075">
               <folding />
             </state>
           </provider>
@@ -76,10 +72,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sketchdaily/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="117" column="43" selection-start="4056" selection-end="4061" vertical-scroll-proportion="0.0">
+            <state line="22" column="18" selection-start="662" selection-end="662" vertical-scroll-proportion="0.25765765">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="error.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/error.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="14" selection-start="739" selection-end="739" vertical-scroll-proportion="-11.346154">
               <folding />
             </state>
           </provider>
@@ -94,10 +99,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sketchdaily/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="38" selection-start="1861" selection-end="1861" vertical-scroll-proportion="0.044854883">
+            <state line="42" column="34" selection-start="991" selection-end="991" vertical-scroll-proportion="-6.4">
               <folding />
             </state>
           </provider>
@@ -133,7 +138,6 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/sketchdaily/urls.py" />
-        <option value="$PROJECT_DIR$/sketchdaily/views.py" />
         <option value="$PROJECT_DIR$/todo.txt" />
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/sketchdaily/static/style.css" />
@@ -141,6 +145,8 @@
         <option value="$PROJECT_DIR$/sketchdaily/settings.py" />
         <option value="$PROJECT_DIR$/sketchdaily/models.py" />
         <option value="$PROJECT_DIR$/sketchdaily/admin.py" />
+        <option value="$PROJECT_DIR$/templates/error.html" />
+        <option value="$PROJECT_DIR$/sketchdaily/views.py" />
       </list>
     </option>
   </component>
@@ -499,28 +505,32 @@
       <created>1364683352501</created>
       <updated>1364683352501</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="some small fixes">
+      <created>1365534350148</created>
+      <updated>1365534350148</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2908623" sideWeight="0.5640668" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3130904" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2908623" sideWeight="0.862117" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3119777" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32963374" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.43593314" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13788301" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286908" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -564,7 +574,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="added better nsfw filtering since some clothed reference pictures still have nudity" />
+    <option name="LAST_COMMIT_MESSAGE" value="some small fixes" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -594,20 +604,21 @@
     <MESSAGE value="switched to mysql and some other changes." />
     <MESSAGE value="adding a to do list" />
     <MESSAGE value="added better nsfw filtering since some clothed reference pictures still have nudity" />
+    <MESSAGE value="some small fixes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="28" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/sketchdaily/views.py</url>
+          <line>115</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="32" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="1476" selection-end="1476" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sketchdaily/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="35" selection-start="589" selection-end="589" vertical-scroll-proportion="0.0">
@@ -624,7 +635,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sketchdaily/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="57" selection-start="339" selection-end="339" vertical-scroll-proportion="0.0" />
+        <state line="9" column="57" selection-start="339" selection-end="339" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/manage.py">
@@ -639,7 +652,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sketchdaily/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="57" selection-start="339" selection-end="339" vertical-scroll-proportion="0.0" />
+        <state line="9" column="57" selection-start="339" selection-end="339" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sketchdaily/wsgi.py">
@@ -650,13 +665,6 @@
     <entry file="file://$PROJECT_DIR$/todo.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="44" selection-start="569" selection-end="569" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="22" selection-start="274" selection-end="286" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -689,16 +697,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sketchdaily/views.py">
+    <entry file="file://$PROJECT_DIR$/sketchdaily/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="43" selection-start="4056" selection-end="4061" vertical-scroll-proportion="0.0">
+        <state line="42" column="34" selection-start="991" selection-end="991" vertical-scroll-proportion="-6.4">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sketchdaily/models.py">
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="38" selection-start="1861" selection-end="1861" vertical-scroll-proportion="0.044854883">
+        <state line="18" column="25" selection-start="0" selection-end="8260" vertical-scroll-proportion="-7.1923075">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/error.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="14" selection-start="739" selection-end="739" vertical-scroll-proportion="-11.346154">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sketchdaily/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="18" selection-start="662" selection-end="662" vertical-scroll-proportion="0.25765765">
           <folding />
         </state>
       </provider>
