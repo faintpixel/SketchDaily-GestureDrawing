@@ -1,6 +1,7 @@
 from django.contrib import admin
 from sketchdaily.models import *
 
+
 class ReferenceImageAdmin(admin.ModelAdmin):
     list_display = ('thumbnail', 'file')
     list_per_page = 15

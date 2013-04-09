@@ -45,9 +45,9 @@
         </div>
         <div class="modal-body">
             <a href="{{ image.sourceURL }}">Source</a><br/>
-            <b>Model: </b><a href="{{ image.model.webpage }}">{{ image.model.name }}</a><br/>
-            <b>Photographer: </b><a href="{{ image.photographer.webpage }}">{{ image.photographer.name }}</a><br/>
-            <b>Date Added: </b>{{ image.dateAdded }}
+            <b>Model: </b><a href="{{ image.image.model.webpage }}">{{ image.image.model.name }}</a><br/>
+            <b>Photographer: </b><a href="{{ image.image.photographer.webpage }}">{{ image.image.photographer.name }}</a><br/>
+            <b>Date Added: </b>{{ image.image.dateAdded }}
         </div>
         <div class="modal-footer">
             <a href="#" data-dismiss="modal" class="btn btn-primary">Close</a>

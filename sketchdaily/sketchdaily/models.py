@@ -63,7 +63,7 @@ class FullBodyReference(models.Model):
     view = models.IntegerField(choices=VIEW_CHOICES, blank=True, null=True)
 
     def __unicode__(self):
-        return self.image.file.name
+        return self.image.file.name[35:]
 
 
 class AnimalReference(models.Model):
