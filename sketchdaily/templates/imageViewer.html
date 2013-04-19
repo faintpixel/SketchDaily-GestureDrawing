@@ -79,6 +79,8 @@
 
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/static/bootstrap/js/jquery-photo-resize.js"></script>
+
 </body>
 </html>
 
@@ -91,8 +93,14 @@
     var totalSeconds = minutes * 60 + seconds;
 
     var paused = false;
-
+    function set_body_height() {
+        var wh = $(window).height();
+        $('#referenceImage').height(wh); // body height = window height
+    }
     $(document).ready(function(){
+        set_body_height();
+        $(window).bind('resize', function() { set_body_height(); });
+
         RefreshTimer();
         timer = setTimeout('Decrement()',1000);
 
