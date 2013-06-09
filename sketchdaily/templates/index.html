@@ -21,6 +21,15 @@
                  <h1>Hello!</h1>
                 <h3>Welcome to the SketchDaily reference doohickey. </h3>
                 <h4>Looking for something else to draw? <a href="http://www.reddit.com/r/sketchdaily/">Join the fun!</a></h4>
+                <div id="news">
+                    <h1>What's New</h1>
+                    <b>June 9th 2013</b>
+                    <ul>
+                        <li>Images now begin to fade at the 5 second mark.</li>
+                        <li>Removed head/feet options from the body parts section since we don't have any images yet.</li>
+                        <li>Added categories for animals (living and skeletons/bones). Will be adding animal pictures over the next little while.</li>
+                    </ul>
+                </div>
             </div>
         <div class="span4 well">
         <ul class="nav nav-tabs" id="myTab">
@@ -103,8 +112,8 @@
                     <select name="part">
                         <option value="">All</option>
                         <option value="1">Hands</option>
-                        <option value="2">Feet</option>
-                        <option value="3">Heads</option>
+                        <!--<option value="2">Feet</option>
+                        <option value="3">Heads</option>-->
                     </select>
                     <br/>
 
@@ -147,6 +156,9 @@
 
                     <input type="hidden" name="imageType" value="bodyParts"/>
                     <button class="btn btn-primary btn-block" type="submit">Start</button>
+
+                    <br/><br/>
+                    NOTE: There aren't many images here yet. Other body parts coming soon(ish).
                 </form>
             </div>
 
@@ -169,13 +181,22 @@
 
                     <br/>
 
+                    <label>Category:</label>
+                    <select name="category">
+                        <option value="">All</option>
+                        <option value="1">Live</option>
+                        <option value="2">Skeletons & Bones</option>
+                    </select>
+
+                    <br/>
+
                     <label>View:</label>
                     <select name="view">
                         <option value="">All</option>
                         <option value="1">Front</option>
                         <option value="2">Side</option>
                         <option value="3">Back</option>
-
+                        <option value="4">Above/Below</option>
                     </select>
 
                     <br/>
@@ -203,6 +224,7 @@
 
             </div>
         </div>
+            <div id="contactUs"><a href="mailto:artomizer@sketchdaily.net">Contact us</a> to report issues, suggest improvements or find out how you can help!</div>
         </div> <!-- span4 -->
         </div> <!-- row -->
     </div>

@@ -49,3 +49,22 @@ body
 {
     background-image:url('/static/background.jpg');
 }
+
+#news
+{
+    margin-top: 40px;
+}
+#news h1
+{
+    font-size: 12pt;
+    font-weight: bold;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+
+#contactUs
+{
+    font-size: 8pt;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}

@@ -32,6 +32,10 @@ BODY_PART_CHOICES = (
     (2, 'Foot'),
     (3, 'Head'),
 )
+LIFE_CATEGORIES = (
+    (1, 'Living'),
+    (2, 'Skeletons/Bones'),
+)
 
 
 class ReferenceImage(models.Model):
@@ -69,6 +73,7 @@ class FullBodyReference(models.Model):
 class AnimalReference(models.Model):
     image = models.ForeignKey('ReferenceImage')
     species = models.IntegerField(choices=SPECIES_CHOICES, blank=True, null=True)
+    category = models.IntegerField(choices=LIFE_CATEGORIES, blank=True, default=1, null=True)
     view = models.IntegerField(choices=VIEW_CHOICES, blank=True, null=True)
 
     def __unicode__(self):

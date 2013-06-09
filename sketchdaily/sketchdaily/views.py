@@ -95,6 +95,7 @@ def startBodyPartSession(request):
 def startAnimalSession(request):
     request.session['view'] = request.GET.get('view', '')
     request.session['species'] = request.GET.get('species', '')
+    request.session['category'] = request.GET.get('category', '')
 
 
 def getNextImageForSession(request):
@@ -157,12 +158,15 @@ def getFullBodyReference(request):
 def getAnimalReference(request):
     view = request.session.get('view', "")
     species = request.session.get('species', "")
+    category = request.session.get('category', "")
 
     imagePool = AnimalReference.objects.all()
     if view != "":
         imagePool = imagePool.filter(view=view)
     if species != "":
         imagePool = imagePool.filter(species=species)
+    if category != "":
+        imagePool = imagePool.filter(category=category)
 
     return imagePool
 

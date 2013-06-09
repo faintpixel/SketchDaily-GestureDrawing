@@ -16,7 +16,7 @@
                         <div href="#" class="btn btn-mini btn-inverse disabled" id="timer"></div>
 
                         <a class="btn btn-mini btn-inverse" href="/imageViewer/?action=rewind"><span class="icon-backward icon-white"> </span></a>
-                        <a class="btn btn-mini btn-inverse" href="#" onclick="TogglePause();"><span class="icon-pause icon-white"> </span></a>
+                        <a class="btn btn-mini btn-inverse" href="#" onclick="TogglePause();"><span id="pauseButton" class="icon-pause icon-white"> </span></a>
                         <a class="btn btn-mini btn-inverse" href="/"><span class="icon-stop icon-white"> </span></a>
                         <a class="btn btn-mini btn-inverse" href="/imageViewer"><span class="icon-forward icon-white"> </span></a>
                         <a class="btn btn-mini btn-inverse" href="#" onclick="ShowModal('imageInfo');"><span class="icon-info-sign icon-white"> </span></a>
@@ -132,11 +132,15 @@
         paused = true;
         clearTimeout(timer);
         $("#timer").text(minutes + ':' + String("00" + seconds).slice(-2) + " (Paused)");
+        $("#pauseButton").removeClass("icon-pause").addClass("icon-play");
+        $("#image").stop();
+        $("#image").fadeIn();
     }
 
     function Unpause() {
         paused = false;
         timer = setTimeout('Decrement()',1000);
+        $("#pauseButton").removeClass("icon-play").addClass("icon-pause");
         RefreshTimer();
     }
 
@@ -154,6 +158,9 @@
         }
 
         RefreshTimer();
+
+        if(minutes == 0 && seconds == 5)
+            $("#image").fadeOut(5000);
 
         if(minutes == 0 && seconds == 0)
             NextImage();
