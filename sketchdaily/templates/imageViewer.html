@@ -8,8 +8,8 @@
 <body>
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
-        <div class="container">
-            <a class="brand" href="/">r/SketchDaily References</a>
+        <div class="container" id="headerbar">
+            <a class="brand" id="pageTitle" href="/">r/SketchDaily References</a>
             <div id="controls" class="pull-right">
                 <div class="btn-toolbar">
                     <div class="btn-group">
@@ -32,14 +32,14 @@
     </div>
 </div>
     <div id="referenceImage">
-        <img id="image" src="http://reference.sketchdaily.net/{{ image.image.file.name|slice:"11:" }}"/>
+        <img id="image" src="http://reference.sketchdaily.net/{{ image.image.file.name|slice:"11:" }}" onload="ImageLoaded();"/>
     </div>
 
 
 
 
 
-    <div id="imageInfo" class="modal fade" role="dialog">
+    <div id="imageInfo" class="hidden modal fade" role="dialog">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
             <h3>Image Info</h3>
@@ -91,7 +91,7 @@
 
     var totalSeconds = minutes * 60 + seconds;
 
-    var paused = false;
+    var paused = true;
     function set_body_height() {
         var wh = $(window).height();
         $('#referenceImage').height(wh); // body height = window height
@@ -102,6 +102,7 @@
 
         RefreshTimer();
         timer = setTimeout('Decrement()',1000);
+        Pause();
 
         $("#imageInfo").on('hidden', function() { HideModal("imageInfo"); });
         $("#about").on('hidden', function() { HideModal("about"); });
@@ -170,6 +171,10 @@
 
     function RefreshTimer() {
         $("#timer").text(minutes + ':' + String("00" + seconds).slice(-2));
+    }
+
+    function ImageLoaded() {
+        Unpause();
     }
 
     function NextImage() {

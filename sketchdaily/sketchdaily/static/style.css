@@ -68,3 +68,37 @@ body
     margin-top: 15px;
     margin-bottom: 15px;
 }
+
+@media all and (max-width: 560px)
+{
+    #pageTitle
+    {
+        display:none;
+    }
+
+    #controls
+    {
+        float: left;
+        margin-left: 15px;
+    }
+}
+
+@media all and (max-width: 960px)
+{
+    #headerbar
+    {
+        width: 100%;
+    }
+
+    #controls
+    {
+        position: relative !important;
+        left: -15px !important;
+    }
+
+    .brand
+    {
+        margin: 0px !important;
+    }
+
+}
