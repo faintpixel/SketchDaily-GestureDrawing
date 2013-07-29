@@ -15,6 +15,10 @@ def help(request):
     return render_to_response('help.html', {}, context_instance=RequestContext(request))
 
 
+def history(request):
+    return render_to_response('history.html', {}, context_instance=RequestContext(request))
+
+
 def imageViewer(request):
     minutes = request.session.get('time-minutes', 1)
     seconds = request.session.get('time-seconds', 11)
@@ -138,33 +142,11 @@ def getNextImageForSession(request):
 
 
 def getFullBodyReference(request):
-    if 'gender' in request.GET:
-        gender = request.GET.get('gender', '')
-    else:
-        gender = request.session.get('gender', "")
-
-    if 'clothing' in request.GET:
-        clothing = request.GET.get('clothing', "")
-    else:
-        clothing = request.session.get('clothing', "")
-
-    if 'post' in request.GET:
-        pose = request.GET.get('pose', "")
-    else:
-        pose = request.session.get('pose', "")
-
-
-    if 'view' in request.GET:
-        view = request.GET.get('view', '')
-    else:
-        view = request.session.get('view', "")
-
-    if 'showNSFW' in request.GET:
-        showNSFW = request.GET.get('showNSFW', False)
-    else:
-        showNSFW = request.session.get('showNSFW', False)
-
-
+    gender = request.GET.get('gender', request.session.get('gender', ""))
+    clothing = request.GET.get('clothing', request.session.get('clothing', ""))
+    pose = request.GET.get('pose', request.session.get('pose', ""))
+    view = request.GET.get('view', request.session.get('view', ""))
+    showNSFW = request.GET.get('showNSFW', request.session.get('showNSFW', False))
 
     imagePool = FullBodyReference.objects.all()
     if gender != "":
@@ -184,21 +166,9 @@ def getFullBodyReference(request):
 
 
 def getAnimalReference(request):
-    if 'view' in request.GET:
-        view = request.GET.get('view', '')
-    else:
-        view = request.session.get('view', "")
-
-    if 'species' in request.GET:
-        species = request.GET.get('species', "")
-    else:
-        species = request.session.get('species', "")
-
-    if 'category' in request.GET:
-        category = request.GET.get('category', "")
-    else:
-        category = request.session.get('category', "")
-
+    view = request.GET.get('view', request.session.get('view', ""))
+    species = request.GET.get('species', request.session.get('species', ""))
+    category = request.GET.get('category', request.session.get('category', ""))
 
     imagePool = AnimalReference.objects.all()
     if view != "":
@@ -212,21 +182,9 @@ def getAnimalReference(request):
 
 
 def getBodyPartReference(request):
-    if 'view' in request.GET:
-        view = request.GET.get('view', '')
-    else:
-        view = request.session.get('view', "")
-
-    if 'gender' in request.GET:
-        gender = request.GET.get('gender', '')
-    else:
-        gender = request.session.get('gender', "")
-
-    if 'bodyPart' in request.GET:
-        bodyPart = request.GET.get('bodyPart', "")
-    else:
-        bodyPart = request.session.get('bodyPart', "")
-
+    view = request.GET.get('view', request.session.get('view', ""))
+    gender = request.GET.get('gender', request.session.get('gender', ""))
+    bodyPart = request.GET.get('bodyPart', request.session.get('bodyPart', ""))
 
     imagePool = BodyPartReference.objects.all()
     if view != "":
@@ -238,7 +196,7 @@ def getBodyPartReference(request):
 
     return imagePool
 
-def getReferenceJSON(request):
+def getReferenceCountJSON(request):
     imageType = request.GET.get('imageType', '')
     if imageType == 'animals':
         imagePool = getAnimalReference(request)

@@ -28,6 +28,10 @@
                 <h4><a href="help">Want to help make this site better?</a></h4>
                 <div id="news">
                     <h1>What's New</h1>
+                    <b>July 29 2013</b>
+                    <ul>
+                        <li>Now displays how many images match the selected criteria (Thanks David!)</li>
+                    </ul>
                     <b>July 23 2013</b>
                     <ul>
                         <li>Fixed filtering in the animals section.</li>
@@ -38,12 +42,7 @@
                         <li>Added 'how you can help' page.</li>
                         <li>Timer doesn't start until image is fully loaded now.</li>
                     </ul>
-                    <b>June 9th 2013</b>
-                    <ul>
-                        <li>Images now begin to fade at the 5 second mark.</li>
-                        <li>Removed head/feet options from the body parts section since we don't have any images yet.</li>
-                        <li>Added categories for animals (living and skeletons/bones). Will be adding animal pictures over the next little while.</li>
-                    </ul>
+                    <a href="history">View change history</a>
                 </div>
             </div>
         <div class="span4 well">
@@ -239,7 +238,7 @@
 
             </div>
         </div>
-            <div>Number of Images: <span id="count"></span></div>
+            <div>Number of Images: <img src="/static/ajaxLoading.gif" id="loadingImage" class="hidden"/><span id="count"></span></div>
             <div id="contactUs"><a href="mailto:artomizer@sketchdaily.net">Contact us</a> to report issues, suggest improvements or find out how you can help!</div>
         </div> <!-- span4 -->
         </div> <!-- row -->
@@ -262,6 +261,9 @@
         $("select").change(function(){
             updateImageCount();
         });
+        $("input[type='checkbox']").change(function(){
+            updateImageCount();
+        });
         $('a[data-toggle="tab"]').on('shown', function (e) {
             updateImageCount();
         });
@@ -271,14 +273,17 @@
     });
 
     function updateImageCount(){
+        $("#loadingImage").show();
+        $("#count").text("");
         $.getJSON(
-                '/json/reference/',
+                '/json/getReferenceCount/',
                 $('div.active form').serialize(),
                 function(json) {
                     var result = json.count;
-                    $("#count").html(result);
+                    $("#count").text(result);
                 }
-            );
+        ).fail(function() { $("#count").text("Unknown"); })
+         .always(function() { $("#loadingImage").hide(); });
     }
 
     function ShowOrHideNSFWDiv() {

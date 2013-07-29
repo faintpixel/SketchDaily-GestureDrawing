@@ -9,7 +9,8 @@ urlpatterns = patterns('',
     url(r'^imageViewer', 'sketchdaily.views.imageViewer'),
     url(r'^startSession', 'sketchdaily.views.startSession'),
     url(r'^help', 'sketchdaily.views.help'),
-    url(r'^json/reference/$', 'sketchdaily.views.getReferenceJSON'),
+    url(r'^history', 'sketchdaily.views.history'),
+    url(r'^json/getReferenceCount/$', 'sketchdaily.views.getReferenceCountJSON'),
 
     # url(r'^sketchdaily/', include('sketchdaily.foo.urls')),
 
