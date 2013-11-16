@@ -30,6 +30,7 @@
                     <h1>What's New</h1>
                     <b>November 15 2013</b>
                     <ul>
+                        <li>Enabled 'heads' in the body parts section and fixed the filtering.</li>
                         <li>Added 'terms of use' to image info section in preparation for another big data upload.</li>
                     </ul>
                     <b>July 29 2013</b>
@@ -87,7 +88,6 @@
                         <option value="2">Side</option>
                         <option value="3">Back</option>
                     </select>
-
                     <br/>
 
                     Time:<br/>
@@ -121,11 +121,11 @@
             <div class="tab-pane" id="bodyParts">
                 <form action="/startSession" method="get">
                     Part:<br/>
-                    <select name="part">
+                    <select name="bodyPart">
                         <option value="">All</option>
                         <option value="1">Hands</option>
-                        <!--<option value="2">Feet</option>
-                        <option value="3">Heads</option>-->
+                        <!--<option value="2">Feet</option>-->
+                        <option value="3">Heads</option>
                     </select>
                     <br/>
 

@@ -88,7 +88,7 @@ class BodyPartReference(models.Model):
     gender = models.IntegerField(choices=GENDER_CHOICES, blank=True, null=True)
 
     def __unicode__(self):
-        return self.image.file.name
+        return "(" + self.get_bodyPart_display() + ") " + self.image.file.name[35:]
 
 
 class Contact(models.Model):
