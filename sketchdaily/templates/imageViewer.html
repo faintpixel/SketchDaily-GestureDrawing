@@ -53,7 +53,13 @@
             <a href="{{ image.sourceURL }}">Source</a><br/>
             <b>Model: </b><a href="{{ image.image.model.webpage }}">{{ image.image.model.name }}</a><br/>
             <b>Photographer: </b><a href="{{ image.image.photographer.webpage }}">{{ image.image.photographer.name }}</a><br/>
-            <b>Date Added: </b>{{ image.image.dateAdded }}
+            <b>Date Added: </b>{{ image.image.dateAdded }}<br/>
+            <b>Terms of Use: </b><br/>
+            {{ image.image.termsOfUse.keyTerms|safe }}
+
+            {% if image.image.termsOfUse.fullTermsURL %}
+                <a href='{{ image.image.termsOfUse.fullTermsURL }}'>Please view the full terms here.</a>
+            {% endif %}
         </div>
         <div class="modal-footer">
             <a href="#" data-dismiss="modal" class="btn btn-primary">Close</a>

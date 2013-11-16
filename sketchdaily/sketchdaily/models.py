@@ -45,6 +45,7 @@ class ReferenceImage(models.Model):
     model = models.ForeignKey('Contact', related_name='model', blank=True, null=True)
     dateAdded = models.DateTimeField(auto_now=True)
     nudity = models.BooleanField()
+    termsOfUse = models.ForeignKey('TermsOfUse', related_name='termsOfUse', blank=True, null=True)
 
     def __unicode__(self):
         return self.file.name
@@ -96,6 +97,15 @@ class Contact(models.Model):
 
     def __unicode__(self):
         return self.name + " (" + self.webpage + ")"
+
+
+class TermsOfUse(models.Model):
+    name = models.CharField(max_length=200)
+    keyTerms = models.TextField(max_length=2000)
+    fullTermsURL = models.URLField(max_length=500, blank=True)
+
+    def __unicode__(self):
+        return self.name + " (" + self.fullTermsURL + ")"
 
 
 class Session(models.Model):
