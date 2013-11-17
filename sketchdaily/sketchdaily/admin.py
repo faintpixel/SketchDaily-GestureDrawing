@@ -8,9 +8,14 @@ class ReferenceImageAdmin(admin.ModelAdmin):
     list_max_show_all = 30
     pass
 
+class FullBodyReferenceImageAdmin(admin.ModelAdmin):
+    list_display = ('thumbnail', '__unicode__')
+    list_per_page = 15
+    list_max_show_all = 30
+    pass
 
 admin.site.register(ReferenceImage, ReferenceImageAdmin)
-admin.site.register(FullBodyReference)
+admin.site.register(FullBodyReference, FullBodyReferenceImageAdmin)
 admin.site.register(AnimalReference)
 admin.site.register(BodyPartReference)
 admin.site.register(Session)

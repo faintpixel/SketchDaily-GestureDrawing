@@ -68,7 +68,12 @@ class FullBodyReference(models.Model):
     view = models.IntegerField(choices=VIEW_CHOICES, blank=True, null=True)
 
     def __unicode__(self):
-        return self.image.file.name[35:]
+        return "(" + self.get_gender_display() + ", " + self.get_clothing_display() + ", " + self.get_pose_display() + ", " + self.get_view_display() + ") " + self.image.file.name[35:]
+
+    def thumbnail(self):
+        return self.image.thumbnail()
+    thumbnail.short_description = 'Thumbnail'
+    thumbnail.allow_tags = True
 
 
 class AnimalReference(models.Model):
