@@ -4,6 +4,7 @@ from django.contrib import auth
 from django.template import RequestContext
 from sketchdaily.models import *
 from django.core import serializers
+from datetime import *
 import json
 
 
@@ -94,6 +95,7 @@ def startFullBodySession(request):
     request.session['pose'] = request.GET.get('pose', '')
     request.session['view'] = request.GET.get('view', '')
     request.session['showNSFW'] = request.GET.get('showNSFW', False)
+    request.session['onlyRecentImages'] = request.GET.get('onlyRecentImages', False)
 
 
 def startBodyPartSession(request):
@@ -147,8 +149,17 @@ def getFullBodyReference(request):
     pose = request.GET.get('pose', request.session.get('pose', ""))
     view = request.GET.get('view', request.session.get('view', ""))
     showNSFW = request.GET.get('showNSFW', request.session.get('showNSFW', False))
+    onlyRecentImages = request.GET.get('onlyRecentImages', request.session.get('onlyRecentImages', False))
 
-    imagePool = FullBodyReference.objects.all()
+    if onlyRecentImages == False:
+        imagePool = FullBodyReference.objects.all()
+    else:
+        mostRecentlyAddedImageDate = FullBodyReference.objects.order_by('-image__dateAdded')[0].image.dateAdded
+        imageCutoffDate = mostRecentlyAddedImageDate - timedelta(days=30)
+        imagePool = FullBodyReference.objects.filter(image__dateAdded__gte = imageCutoffDate)
+        if len(imagePool) < 50:
+            imagePool = FullBodyReference.objects.order_by('-image__dateAdded')[:50]
+
     if gender != "":
         imagePool = imagePool.filter(gender=gender)
     if clothing != "":
