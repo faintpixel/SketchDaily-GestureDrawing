@@ -158,8 +158,6 @@ def getFullBodyReference(request):
         mostRecentlyAddedImageDate = FullBodyReference.objects.order_by('-image__dateAdded')[0].image.dateAdded
         imageCutoffDate = mostRecentlyAddedImageDate - timedelta(days=30)
         imagePool = FullBodyReference.objects.filter(image__dateAdded__gte = imageCutoffDate)
-        if len(imagePool) < 50:
-            imagePool = FullBodyReference.objects.order_by('-image__dateAdded')[:50]
 
     if gender != "":
         imagePool = imagePool.filter(gender=gender)
@@ -172,7 +170,6 @@ def getFullBodyReference(request):
         imagePool = imagePool.filter(pose=pose)
     if view != "":
         imagePool = imagePool.filter(view=view)
-
 
     return imagePool
 

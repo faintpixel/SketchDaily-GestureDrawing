@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" hash="887230315">
-    <data-source source="LOCAL" name="Django default" product="MySQL" version="5.1.56-log" jdbc-version="4.0" driver-name="MySQL-AB JDBC Driver" driver-version="mysql-connector-java-5.1.18 ( Revision: tonci.grgin@oracle.com-20110930151701-jfj14ddfq48ifkfq )" uuid="eaf1a664-4c6e-4678-8305-9c82425dfcfd">
-      <extra-name-characters>#@</extra-name-characters>
-      <identifier-quote-string>`</identifier-quote-string>
+    <data-source source="LOCAL" name="Django default" uuid="eaf1a664-4c6e-4678-8305-9c82425dfcfd">
+      <driver-ref>mysql</driver-ref>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://mysql.newfrost.com:3306/skdgesture</jdbc-url>
-      <user-name>drawbot</user-name>
+      <jdbc-url>jdbc:mysql://newfrost.com:3306/Sketchdaily_ReferenceSite</jdbc-url>
+      <user-name>skd-refSite</user-name>
       <user-password>dfd8df9adfc6dfc6dfcfdfd8dfc8dfc6dfcbdfcedfcfdfd9</user-password>
       <libraries>
         <library>
@@ -17,9 +16,8 @@
         </library>
       </libraries>
     </data-source>
-    <data-source source="LOCAL" name="Django default" product="MySQL" version="5.1.56-log" jdbc-version="4.0" driver-name="MySQL-AB JDBC Driver" driver-version="mysql-connector-java-5.1.18 ( Revision: tonci.grgin@oracle.com-20110930151701-jfj14ddfq48ifkfq )" uuid="831a9991-af37-493d-9da4-87a080b820f9">
-      <extra-name-characters>#@</extra-name-characters>
-      <identifier-quote-string>`</identifier-quote-string>
+    <data-source source="LOCAL" name="Django default" uuid="831a9991-af37-493d-9da4-87a080b820f9">
+      <driver-ref>mysql</driver-ref>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://mysql.newfrost.com:3306/skdgesture</jdbc-url>
       <user-name>drawbot</user-name>
