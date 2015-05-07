@@ -4,24 +4,13 @@
     <data-source source="LOCAL" name="Django default" uuid="eaf1a664-4c6e-4678-8305-9c82425dfcfd">
       <driver-ref>mysql</driver-ref>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://newfrost.com:3306/Sketchdaily_ReferenceSite</jdbc-url>
-      <user-name>skd-refSite</user-name>
-      <user-password>dfd8df9adfc6dfc6dfcfdfd8dfc8dfc6dfcbdfcedfcfdfd9</user-password>
-      <libraries>
-        <library>
-          <url>file://$USER_HOME$/.PyCharm20/config/jdbc-drivers/mysql-connector-license.txt</url>
-        </library>
-        <library>
-          <url>file://$USER_HOME$/.PyCharm20/config/jdbc-drivers/mysql-connector-java-5.1.18-bin.jar</url>
-        </library>
-      </libraries>
+      <jdbc-url>jdbc:mysql://zzzz:zzzz/zzzz</jdbc-url>
+      <libraries />
     </data-source>
     <data-source source="LOCAL" name="Django default" uuid="831a9991-af37-493d-9da4-87a080b820f9">
       <driver-ref>mysql</driver-ref>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://mysql.newfrost.com:3306/skdgesture</jdbc-url>
-      <user-name>drawbot</user-name>
-      <user-password>dfd8df9adfc6dfc6dfcfdfd8dfc8dfc6dfcbdfcedfcfdfd9</user-password>
       <libraries>
         <library>
           <url>file://$USER_HOME$/.PyCharm20/config/jdbc-drivers/mysql-connector-license.txt</url>
@@ -33,4 +22,3 @@
     </data-source>
   </component>
 </project>
-

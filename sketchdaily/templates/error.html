@@ -1,7 +1,11 @@
+{% load i18n %}
+
+{% get_current_language as LANGUAGE_CODE %}
+<!-- Current language: {{ LANGUAGE_CODE }} -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Sketchdaily Gesture/Figure Drawing</title>
+    <title>{% trans "SketchDaily Gesture/Figure Drawing" %}</title>
     <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link rel="stylesheet" type="text/css" href="/static/style.css" />
 
@@ -10,7 +14,7 @@
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
-            <a class="brand" href="#">r/SketchDaily References</a>
+            <a class="brand" href="#">{% trans "r/SketchDaily References" %}</a>
 
         </div>
     </div>
@@ -18,9 +22,9 @@
 <div id="homediv" class="container">
     <div class="row">
         <div class="span7">
-            <h1>Oh no, it broke!</h1>
+            <h1>{% trans "Oh no, it broke!" %}</h1>
             <h3>{{ message }} </h3>
-            <h4><a href='/'>Return to main page!</a></h4>
+            <h4><a href='/'>{% trans "Return to main page!" %}</a></h4>
         </div>
 </div>
 

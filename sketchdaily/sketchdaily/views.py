@@ -5,6 +5,7 @@ from django.template import RequestContext
 from sketchdaily.models import *
 from django.core import serializers
 from datetime import *
+from django.utils.translation import activate
 import json
 
 
@@ -26,7 +27,7 @@ def imageViewer(request):
     seconds = request.session.get('time-seconds', 11)
 
     action = request.GET.get('action', '')
-    if action == "rewind":
+    if action == 'rewind':
         image = getPreviousImage(request)
     else:
         try:
@@ -145,10 +146,10 @@ def getNextImageForSession(request):
 
 
 def getFullBodyReference(request):
-    gender = request.GET.get('gender', request.session.get('gender', ""))
-    clothing = request.GET.get('clothing', request.session.get('clothing', ""))
-    pose = request.GET.get('pose', request.session.get('pose', ""))
-    view = request.GET.get('view', request.session.get('view', ""))
+    gender = request.GET.get('gender', request.session.get('gender', ''))
+    clothing = request.GET.get('clothing', request.session.get('clothing', ''))
+    pose = request.GET.get('pose', request.session.get('pose', ''))
+    view = request.GET.get('view', request.session.get('view', ''))
     showNSFW = request.GET.get('showNSFW', request.session.get('showNSFW', False))
     onlyRecentImages = request.GET.get('onlyRecentImages', request.session.get('onlyRecentImages', False))
 
@@ -175,9 +176,9 @@ def getFullBodyReference(request):
 
 
 def getAnimalReference(request):
-    view = request.GET.get('view', request.session.get('view', ""))
-    species = request.GET.get('species', request.session.get('species', ""))
-    category = request.GET.get('category', request.session.get('category', ""))
+    view = request.GET.get('view', request.session.get('view', ''))
+    species = request.GET.get('species', request.session.get('species', ''))
+    category = request.GET.get('category', request.session.get('category', ''))
 
     imagePool = AnimalReference.objects.all()
     if view != "":
@@ -191,16 +192,16 @@ def getAnimalReference(request):
 
 
 def getBodyPartReference(request):
-    view = request.GET.get('view', request.session.get('view', ""))
-    gender = request.GET.get('gender', request.session.get('gender', ""))
-    bodyPart = request.GET.get('bodyPart', request.session.get('bodyPart', ""))
+    view = request.GET.get('view', request.session.get('view', ''))
+    gender = request.GET.get('gender', request.session.get('gender', ''))
+    bodyPart = request.GET.get('bodyPart', request.session.get('bodyPart', ''))
 
     imagePool = BodyPartReference.objects.all()
-    if view != "":
+    if view != '':
         imagePool = imagePool.filter(view=view)
-    if gender != "":
+    if gender != '':
         imagePool = imagePool.filter(gender=gender)
-    if bodyPart != "":
+    if bodyPart != '':
         imagePool = imagePool.filter(bodyPart=bodyPart)
 
     return imagePool
@@ -219,6 +220,6 @@ def getReferenceCountJSON(request):
     imageCount = json.dumps({'count': imagePool.count()})
 
     response = HttpResponse()
-    response['Content-Type'] = "text/javascript"
+    response['Content-Type'] = 'text/javascript'
     response.write(imageCount)
     return response

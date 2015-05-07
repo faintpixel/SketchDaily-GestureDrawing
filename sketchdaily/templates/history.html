@@ -1,3 +1,7 @@
+{% load i18n %}
+
+{% get_current_language as LANGUAGE_CODE %}
+<!-- Current language: {{ LANGUAGE_CODE }} -->
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
@@ -18,7 +22,13 @@
 <div id="homediv" class="container">
 <div class="row">
 <div class="span12 well">
-    <b>May 22 2013</b>
+    {% trans "Sorry, this page is currently only available in english." %}<br/><br/>
+
+    <b>May 6 2015</b>
+    <ul>
+        <li>Added new languages for the site. <a href="mailto:artomizer@sketchdaily.net">Please let us know</a> if anything isn't working right or if translations are incorrect.</li>
+    </ul>
+    <b>May 22 2014</b>
     <ul>
         <li>Fixed a bug which was causing issues with the 'only recent images' option.</li>
         <li>We recently got permission to use several new batches of images, so expect to see some of those popping up soon.</li>

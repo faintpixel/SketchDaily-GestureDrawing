@@ -4,7 +4,7 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
+    # ('Artomizer', 'artomizer@sketchdaily.net'),
 )
 
 MANAGERS = ADMINS
@@ -12,11 +12,11 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'skdgesture',                      # Or path to database file if using sqlite3.
-        'USER': 'drawbot',                      # Not used with sqlite3.
-        'PASSWORD': '',                  # Not used with sqlite3.
-        'HOST': 'mysql.newfrost.com',                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '3306',                      # Set to empty string for default. Not used with sqlite3.
+        'NAME': 'zzzz',                      # Or path to database file if using sqlite3.
+        'USER': 'zzzz',                      # Not used with sqlite3.
+        'PASSWORD': 'zzzz',                  # Not used with sqlite3.
+        'HOST': 'zzzz',                      # Set to empty string for localhost. Not used with sqlite3.
+        'PORT': 'zzzz',                      # Set to empty string for default. Not used with sqlite3.
     }
 }
 
@@ -89,11 +89,13 @@ TEMPLATE_LOADERS = (
 )
 
 MIDDLEWARE_CLASSES = (
-    'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
@@ -118,6 +120,8 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
     'sketchdaily'
 )
+
+DEBUG=False
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
@@ -147,3 +151,22 @@ LOGGING = {
         },
     }
 }
+
+
+from django.utils.translation import ugettext_lazy as _
+LANGUAGES = (
+    ('en', _('English')),
+    #('sv', _('Swedish')),
+    #('fr', _('French')),
+    #('de', _('German')),
+    #('ru', _('Russian')),
+    #('es', _('Spanish')),
+    #('ko', _('Korean')),
+    #('ja', _('Japanese')),
+    #('zh', _('Chinese')),
+    #('ar', _('Arabic')),
+    #('hi', _('Hindi')),
+)
+
+text_x = 'C:\\src\\github\\SketchDaily-GestureDrawing\\sketchdaily\\sketchdaily\\locale\\'
+LOCALE_PATHS = (os.path.join(os.path.dirname(__file__), 'locale').replace('\\','/'),)

@@ -1,7 +1,11 @@
+{% load i18n %}
+
+{% get_current_language as LANGUAGE_CODE %}
+<!-- Current language: {{ LANGUAGE_CODE }} -->
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sketchdaily Gesture/Figure Drawing</title>
+    <title>{% trans "SketchDaily Gesture/Figure Drawing" %}</title>
     <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link rel="stylesheet" type="text/css" href="/static/style.css" />
 </head>
@@ -9,7 +13,7 @@
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container" id="headerbar">
-            <a class="brand" id="pageTitle" href="/">r/SketchDaily References</a>
+            <a class="brand" id="pageTitle" href="/">{% trans "r/SketchDaily References" %}</a>
             <div id="controls" class="pull-right">
                 <div class="btn-toolbar">
                     <div class="btn-group">
@@ -42,44 +46,44 @@
     <div id="imageInfo" class="hidden modal fade" role="dialog">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h3>Image Info</h3>
+            <h3>{% trans "Image Info" %}</h3>
         </div>
         <div class="modal-body">
-            <a href="{{ image.sourceURL }}">Source</a><br/>
-            <b>Model: </b><a href="{{ image.image.model.webpage }}">{{ image.image.model.name }}</a><br/>
-            <b>Photographer: </b><a href="{{ image.image.photographer.webpage }}">{{ image.image.photographer.name }}</a><br/>
-            <b>Date Added: </b>{{ image.image.dateAdded }}<br/>
-            <b>Terms of Use: </b><br/>
+            <a href="{{ image.sourceURL }}">{% trans "Source" %}</a><br/>
+            <b>{% trans "Model" %}: </b><a href="{{ image.image.model.webpage }}">{{ image.image.model.name }}</a><br/>
+            <b>{% trans "Photographer" %}: </b><a href="{{ image.image.photographer.webpage }}">{{ image.image.photographer.name }}</a><br/>
+            <b>{% trans "Date Added" %}: </b>{{ image.image.dateAdded }}<br/>
+            <b>{% trans "Terms of Use" %}: </b><br/>
             {{ image.image.termsOfUse.keyTerms|safe }}
 
             {% if image.image.termsOfUse.fullTermsURL %}
-                <a href='{{ image.image.termsOfUse.fullTermsURL }}'>Please view the full terms here.</a>
+                <a href='{{ image.image.termsOfUse.fullTermsURL }}'>{% trans "Please view the full terms here." %}</a>
             {% endif %}
         </div>
         <div class="modal-footer">
-            <a href="#" data-dismiss="modal" class="btn btn-primary">Close</a>
+            <a href="#" data-dismiss="modal" class="btn btn-primary">{% trans "Close" %}</a>
         </div>
     </div>
 
     <div id="about" class="modal fade" role="dialog">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h3>About</h3>
+            <h3>{% trans "About" %}</h3>
         </div>
         <div class="modal-body">
-            <b>Left</b> - Previous image<br/>
-            <b>Right</b> - Next image<br/>
-            <b>Spacebar</b> - Pause<br/>
-            <b>Escape</b> - Stop
+            <b>{% trans "Left" %}</b> - {% trans "Previous image" %}<br/>
+            <b>{% trans "Right" %}</b> - {% trans "Next image" %}<br/>
+            <b>{% trans "Spacebar" %}</b> - {% trans "Pause" %}<br/>
+            <b>{% trans "Escape" %}</b> - {% trans "Stop" %}
             <br/>
             <br/>
 
-            <a href="mailto:artomizer@sketchdaily.net">Contact Us</a> to report issues or suggest improvements!<br/>
+            {% blocktrans %}<a href="mailto:artomizer@sketchdaily.net">Contact Us</a> to report issues or suggest improvements!{% endblocktrans %}<br/>
             <br/>
-            <a href="http://reddit.com/r/sketchdaily">Visit us on reddit!</a>
+            <a href="http://reddit.com/r/sketchdaily">{% trans "Visit us on reddit!" %}</a>
         </div>
         <div class="modal-footer">
-            <a href="#" data-dismiss="modal" class="btn btn-primary">Close</a>
+            <a href="#" data-dismiss="modal" class="btn btn-primary">{% trans "Close" %}</a>
         </div>
     </div>
 

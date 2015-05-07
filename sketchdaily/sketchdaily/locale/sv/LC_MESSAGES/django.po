@@ -1,0 +1,393 @@
+# Initial translation by Bewinged.
+# figauro may be able to double check.
+
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-05-06 15:20-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\sketchdaily\settings.py:156
+msgid "English"
+msgstr ""
+
+#: .\sketchdaily\settings.py:157
+msgid "Swedish"
+msgstr ""
+
+#: .\sketchdaily\settings.py:158
+msgid "Portuguese (Brazil)"
+msgstr ""
+
+#: .\sketchdaily\settings.py:159
+msgid "Catalan"
+msgstr ""
+
+#: .\templates\error.html:8 .\templates\imageViewer.html:8
+#: .\templates\index.html:8
+msgid "SketchDaily Gesture/Figure Drawing"
+msgstr ""
+
+#: .\templates\error.html:17 .\templates\imageViewer.html:16
+#: .\templates\index.html:16
+msgid "r/SketchDaily References"
+msgstr ""
+
+#: .\templates\error.html:25
+msgid "Oh no, it broke!"
+msgstr ""
+
+#: .\templates\error.html:27
+msgid "Return to main page!"
+msgstr ""
+
+#: .\templates\help.html:25 .\templates\history.html:25
+msgid "Sorry, this page is currently only available in english."
+msgstr ""
+
+#: .\templates\imageViewer.html:49
+msgid "Image Info"
+msgstr ""
+
+#: .\templates\imageViewer.html:52
+msgid "Source"
+msgstr ""
+
+#: .\templates\imageViewer.html:53
+msgid "Model"
+msgstr ""
+
+#: .\templates\imageViewer.html:54
+msgid "Photographer"
+msgstr ""
+
+#: .\templates\imageViewer.html:55
+msgid "Date Added"
+msgstr ""
+
+#: .\templates\imageViewer.html:56
+msgid "Terms of Use"
+msgstr ""
+
+#: .\templates\imageViewer.html:60
+msgid "Please view the full terms here."
+msgstr ""
+
+#: .\templates\imageViewer.html:64 .\templates\imageViewer.html.py:86
+msgid "Close"
+msgstr ""
+
+#: .\templates\imageViewer.html:71
+msgid "About"
+msgstr ""
+
+#: .\templates\imageViewer.html:74
+msgid "Left"
+msgstr ""
+
+#: .\templates\imageViewer.html:74
+msgid "Previous image"
+msgstr ""
+
+#: .\templates\imageViewer.html:75
+msgid "Right"
+msgstr ""
+
+#: .\templates\imageViewer.html:75
+msgid "Next image"
+msgstr ""
+
+#: .\templates\imageViewer.html:76
+msgid "Spacebar"
+msgstr ""
+
+#: .\templates\imageViewer.html:76
+msgid "Pause"
+msgstr ""
+
+#: .\templates\imageViewer.html:77
+msgid "Escape"
+msgstr ""
+
+#: .\templates\imageViewer.html:77
+msgid "Stop"
+msgstr ""
+
+#: .\templates\imageViewer.html:81
+msgid ""
+"<a href=\"mailto:artomizer@sketchdaily.net\">Contact Us</a> to report issues "
+"or suggest improvements!"
+msgstr ""
+
+#: .\templates\imageViewer.html:83
+msgid "Visit us on reddit!"
+msgstr ""
+
+#: .\templates\index.html:24
+msgid "Hello!"
+msgstr ""
+
+#: .\templates\index.html:25
+msgid "Welcome to the SketchDaily reference doohickey."
+msgstr ""
+
+#: .\templates\index.html:26
+msgid "Looking for something else to draw?"
+msgstr ""
+
+#: .\templates\index.html:26
+msgid "Join the fun!"
+msgstr ""
+
+#: .\templates\index.html:27
+msgid "Want to help make this site better?"
+msgstr ""
+
+#: .\templates\index.html:29
+msgid "What's New"
+msgstr ""
+
+#: .\templates\index.html:30
+msgid "May 6 2015"
+msgstr ""
+
+#: .\templates\index.html:32
+msgid ""
+"Added new languages for the site. <a href=\"mailto:artomizer@sketchdaily.net"
+"\">Please let us know</a> if anything isn't working right or if translations "
+"are incorrect."
+msgstr ""
+
+#: .\templates\index.html:34
+msgid "May 22 2014"
+msgstr ""
+
+#: .\templates\index.html:36
+msgid ""
+"Fixed a bug which was causing issues with the 'only recent images' option."
+msgstr ""
+
+#: .\templates\index.html:37
+msgid ""
+"We recently got permission to use several new batches of images, so expect "
+"to see some of those popping up soon."
+msgstr ""
+
+#: .\templates\index.html:39
+msgid "May 12 2014"
+msgstr ""
+
+#: .\templates\index.html:41
+msgid ""
+"Sorry for the downtime! We've moved to a new host, which should fix some "
+"problems we've had lately, as well as run faster. The site might be up and "
+"down for a few more days while we iron out some more kinks."
+msgstr ""
+
+#: .\templates\index.html:43
+msgid "November 17 2013"
+msgstr ""
+
+#: .\templates\index.html:45
+msgid ""
+"Added an option to only use the most recent images for the full body section."
+msgstr ""
+
+#: .\templates\index.html:47
+msgid "View change history"
+msgstr ""
+
+#: .\templates\index.html:52
+msgid "Full Body"
+msgstr ""
+
+#: .\templates\index.html:53
+msgid "Body Parts"
+msgstr ""
+
+#: .\templates\index.html:54
+msgid "Animals"
+msgstr ""
+
+#: .\templates\index.html:60 .\templates\index.html.py:131
+msgid "Gender"
+msgstr ""
+
+#: .\templates\index.html:62 .\templates\index.html.py:70
+#: .\templates\index.html:81 .\templates\index.html.py:133
+msgid "Both"
+msgstr ""
+
+#: .\templates\index.html:63 .\templates\index.html.py:134
+msgid "Male"
+msgstr ""
+
+#: .\templates\index.html:64 .\templates\index.html.py:135
+msgid "Female"
+msgstr ""
+
+#: .\templates\index.html:68
+msgid "Clothing"
+msgstr ""
+
+#: .\templates\index.html:71
+msgid "Clothed"
+msgstr ""
+
+#: .\templates\index.html:72
+msgid "Nude"
+msgstr ""
+
+#: .\templates\index.html:76
+msgid "Include NSFW images"
+msgstr ""
+
+#: .\templates\index.html:79
+msgid "Pose"
+msgstr ""
+
+#: .\templates\index.html:82
+msgid "Action"
+msgstr ""
+
+#: .\templates\index.html:83
+msgid "Stationary"
+msgstr ""
+
+#: .\templates\index.html:87 .\templates\index.html.py:204
+msgid "View"
+msgstr ""
+
+#: .\templates\index.html:89 .\templates\index.html.py:124
+#: .\templates\index.html:141 .\templates\index.html.py:185
+#: .\templates\index.html:197 .\templates\index.html.py:206
+msgid "All"
+msgstr ""
+
+#: .\templates\index.html:90 .\templates\index.html.py:142
+#: .\templates\index.html:207
+msgid "Front"
+msgstr ""
+
+#: .\templates\index.html:91 .\templates\index.html.py:143
+#: .\templates\index.html:208
+msgid "Side"
+msgstr ""
+
+#: .\templates\index.html:92 .\templates\index.html.py:144
+#: .\templates\index.html:209
+msgid "Back"
+msgstr ""
+
+#: .\templates\index.html:96 .\templates\index.html.py:150
+#: .\templates\index.html:215
+msgid "Time"
+msgstr ""
+
+#: .\templates\index.html:98 .\templates\index.html.py:152
+#: .\templates\index.html:217
+msgid "30 seconds"
+msgstr ""
+
+#: .\templates\index.html:99 .\templates\index.html.py:153
+#: .\templates\index.html:218
+msgid "1 minute"
+msgstr ""
+
+#: .\templates\index.html:100 .\templates\index.html.py:154
+#: .\templates\index.html:219
+msgid "2 minutes"
+msgstr ""
+
+#: .\templates\index.html:101 .\templates\index.html.py:155
+#: .\templates\index.html:220
+msgid "5 minutes"
+msgstr ""
+
+#: .\templates\index.html:102 .\templates\index.html.py:156
+#: .\templates\index.html:221
+msgid "10 minutes"
+msgstr ""
+
+#: .\templates\index.html:106
+msgid "Only use most recent images"
+msgstr ""
+
+#: .\templates\index.html:110 .\templates\index.html.py:169
+#: .\templates\index.html:233
+msgid "Start"
+msgstr ""
+
+#: .\templates\index.html:122
+msgid "Part"
+msgstr ""
+
+#: .\templates\index.html:125
+msgid "Hands"
+msgstr ""
+
+#: .\templates\index.html:127
+msgid "Heads"
+msgstr ""
+
+#: .\templates\index.html:172
+msgid ""
+"NOTE: There aren't many images here yet. Other body parts coming soon(ish)."
+msgstr ""
+
+#: .\templates\index.html:183
+msgid "Type"
+msgstr ""
+
+#: .\templates\index.html:186
+msgid "Bird"
+msgstr ""
+
+#: .\templates\index.html:187
+msgid "Fish"
+msgstr ""
+
+#: .\templates\index.html:188
+msgid "Reptile/Amphibian"
+msgstr ""
+
+#: .\templates\index.html:189
+msgid "Bug"
+msgstr ""
+
+#: .\templates\index.html:190
+msgid "Mammal"
+msgstr ""
+
+#: .\templates\index.html:195
+msgid "Category"
+msgstr ""
+
+#: .\templates\index.html:198
+msgid "Live"
+msgstr ""
+
+#: .\templates\index.html:199
+msgid "Skeletons & Bones"
+msgstr ""
+
+#: .\templates\index.html:210
+msgid "Above/Below"
+msgstr ""
+
+#: .\templates\index.html:238
+msgid "Number of Images"
+msgstr ""
+
+#: .\templates\index.html:239
+msgid ""
+"<a href=\"mailto:artomizer@sketchdaily.net\">Contact us</a> to report "
+"issues, suggest improvements or find out how you can help!"
+msgstr ""

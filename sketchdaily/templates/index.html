@@ -1,7 +1,11 @@
+{% load i18n %}
+
+{% get_current_language as LANGUAGE_CODE %}
+<!-- Current language: {{ LANGUAGE_CODE }} -->
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <title>Sketchdaily Gesture/Figure Drawing</title>
+    <title>{% trans "SketchDaily Gesture/Figure Drawing" %}</title>
     <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link rel="stylesheet" type="text/css" href="/static/style.css" />
 </head>
@@ -9,7 +13,7 @@
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
-        <a class="brand" href="#">r/SketchDaily References</a>
+        <a class="brand" href="#">{% trans "r/SketchDaily References" %}</a>
 
         </div>
     </div>
@@ -17,94 +21,93 @@
     <div id="homediv" class="container">
         <div class="row">
             <div class="span7">
-                 <h1>Hello!</h1>
-                <h3>Welcome to the SketchDaily reference doohickey. </h3>
-                <h4>Looking for something else to draw? <a href="http://www.reddit.com/r/sketchdaily/">Join the fun!</a></h4>
-                <h4><a href="help">Want to help make this site better?</a></h4>
+                 <h1>{% trans "Hello!" %}</h1>
+                <h3>{% trans "Welcome to the SketchDaily reference doohickey." %}</h3>
+                <h4>{% trans "Looking for something else to draw?" %} <a href="http://www.reddit.com/r/sketchdaily/">{% trans "Join the fun!" %}</a></h4>
+                <h4><a href="help">{% trans "Want to help make this site better?" %}</a></h4>
                 <div id="news">
-                    <h1>What's New</h1>
-                    <b>May 22 2013</b>
+                    <h1>{% trans "What's New" %}</h1>
+                    <b>{% trans "May 6 2015" %}</b>
                     <ul>
-                        <li>Fixed a bug which was causing issues with the 'only recent images' option.</li>
-                        <li>We recently got permission to use several new batches of images, so expect to see some of those popping up soon.</li>
+                        <li>{% blocktrans %}Added new languages for the site. <a href="mailto:artomizer@sketchdaily.net">Please let us know</a> if anything isn't working right or if translations are incorrect.{% endblocktrans %}</li>
                     </ul>
-                    <b>May 12 2014</b>
+                    <b>{% trans "May 22 2014" %}</b>
                     <ul>
-                        <li>Sorry for the downtime! We've moved to a new host, which should fix some problems we've had lately, as well as run faster. The site might be up and down for a few more days while we iron out some more kinks.</li>
+                        <li>{% trans "Fixed a bug which was causing issues with the 'only recent images' option." %}</li>
+                        <li>{% blocktrans %}We recently got permission to use several new batches of images, so expect to see some of those popping up soon.{% endblocktrans %}</li>
                     </ul>
-                    <b>November 17 2013</b>
+                    <b>{% trans "May 12 2014" %}</b>
                     <ul>
-                        <li>Added an option to only use the most recent images for the full body section.</li>
+                        <li>{% blocktrans %}Sorry for the downtime! We've moved to a new host, which should fix some problems we've had lately, as well as run faster. The site might be up and down for a few more days while we iron out some more kinks.{% endblocktrans %}</li>
                     </ul>
-                    <b>November 15 2013</b>
+                    <b>{% trans "November 17 2013" %}</b>
                     <ul>
-                        <li>Enabled 'heads' in the body parts section and fixed the filtering.</li>
-                        <li>Added 'terms of use' to image info section in preparation for another big data upload.</li>
+                        <li>{% trans "Added an option to only use the most recent images for the full body section." %}</li>
                     </ul>
-                    <a href="history">View change history</a>
+                    <a href="history">{% trans "View change history" %}</a>
                 </div>
             </div>
         <div class="span4 well">
         <ul class="nav nav-tabs" id="myTab">
-            <li class="active"><a href="#fullBody" data-toggle="tab">Full Body</a></li>
-            <li><a href="#bodyParts" data-toggle="tab">Body Parts</a></li>
-            <li><a href="#animals" data-toggle="tab">Animals</a></li>
+            <li class="active"><a href="#fullBody" data-toggle="tab">{% trans "Full Body" %}</a></li>
+            <li><a href="#bodyParts" data-toggle="tab">{% trans "Body Parts" %}</a></li>
+            <li><a href="#animals" data-toggle="tab">{% trans "Animals" %}</a></li>
         </ul>
 
         <div class="tab-content">
             <div class="tab-pane active" id="fullBody">
                 <form action="/startSession" method="get">
-                    Gender:<br/>
+                    {% trans "Gender" %}:<br/>
                     <select name="gender">
-                        <option value="">Both</option>
-                        <option value="1">Male</option>
-                        <option value="2">Female</option>
+                        <option value="">{% trans "Both" %}</option>
+                        <option value="1">{% trans "Male" %}</option>
+                        <option value="2">{% trans "Female" %}</option>
                     </select>
                     <br/>
 
-                    Clothing:<br/>
+                    {% trans "Clothing" %}:<br/>
                     <select id="clothing" name="clothing">
-                        <option value="">Both</option>
-                        <option value="1">Clothed</option>
-                        <option value="2">Nude</option>
+                        <option value="">{% trans "Both" %}</option>
+                        <option value="1">{% trans "Clothed" %}</option>
+                        <option value="2">{% trans "Nude" %}</option>
                     </select>
                     <br/>
                     <div id="showNSFWdiv" class="hidden">
-                        <input type="checkbox" id="showNSFW" name="showNSFW" value="1"> Include NSFW images
+                        <input type="checkbox" id="showNSFW" name="showNSFW" value="1"> {% trans "Include NSFW images" %}
                     </div>
                     <br/>
-                    Pose:<br/>
+                    {% trans "Pose" %}:<br/>
                     <select name="pose">
-                        <option value="">Both</option>
-                        <option value="1">Action</option>
-                        <option value="2">Stationary</option>
+                        <option value="">{% trans "Both" %}</option>
+                        <option value="1">{% trans "Action" %}</option>
+                        <option value="2">{% trans "Stationary" %}</option>
                     </select>
                     <br/>
 
-                    View:<br/>
+                    {% trans "View" %}:<br/>
                     <select name="view">
-                        <option value="">All</option>
-                        <option value="1">Front</option>
-                        <option value="2">Side</option>
-                        <option value="3">Back</option>
+                        <option value="">{% trans "All" %}</option>
+                        <option value="1">{% trans "Front" %}</option>
+                        <option value="2">{% trans "Side" %}</option>
+                        <option value="3">{% trans "Back" %}</option>
                     </select>
                     <br/>
 
-                    Time:<br/>
+                    {% trans "Time" %}Time:<br/>
                     <select name="time" id="time">
-                        <option value="0:30">30 seconds</option>
-                        <option value="1:00">1 minute</option>
-                        <option value="2:00">2 minutes</option>
-                        <option value="5:00">5 minutes</option>
-                        <option value="10:00">10 minutes</option>
+                        <option value="0:30">{% trans "30 seconds" %}</option>
+                        <option value="1:00">{% trans "1 minute" %}</option>
+                        <option value="2:00">{% trans "2 minutes" %}</option>
+                        <option value="5:00">{% trans "5 minutes" %}</option>
+                        <option value="10:00">{% trans "10 minutes" %}</option>
                     </select>
                     <br/>
 
-                    <input type="checkbox" id="onlyRecentImages" name="onlyRecentImages" value="1"> Only use most recent images
+                    <input type="checkbox" id="onlyRecentImages" name="onlyRecentImages" value="1"> {% trans "Only use most recent images" %}
                     <br/><br/>
 
                     <input type="hidden" name="imageType" value="fullBodies"/>
-                    <button class="btn btn-primary btn-block" type="submit">Start</button>
+                    <button class="btn btn-primary btn-block" type="submit">{% trans "Start" %}</button>
                 </form>
             </div>
 
@@ -116,41 +119,41 @@
 
             <div class="tab-pane" id="bodyParts">
                 <form action="/startSession" method="get">
-                    Part:<br/>
+                    {% trans "Part" %}:<br/>
                     <select name="bodyPart">
-                        <option value="">All</option>
-                        <option value="1">Hands</option>
+                        <option value="">{% trans "All" %}</option>
+                        <option value="1">{% trans "Hands" %}</option>
                         <!--<option value="2">Feet</option>-->
-                        <option value="3">Heads</option>
+                        <option value="3">{% trans "Heads" %}</option>
                     </select>
                     <br/>
 
-                    Gender:<br/>
+                    {% trans "Gender" %}:<br/>
                     <select name="gender">
-                        <option value="">Both</option>
-                        <option value="1">Male</option>
-                        <option value="2">Female</option>
+                        <option value="">{% trans "Both" %}</option>
+                        <option value="1">{% trans "Male" %}</option>
+                        <option value="2">{% trans "Female" %}</option>
                     </select>
                    <br/>
 
                     View:<br/>
                     <select name="view">
-                        <option value="">All</option>
-                        <option value="1">Front</option>
-                        <option value="2">Side</option>
-                        <option value="3">Back</option>
+                        <option value="">{% trans "All" %}</option>
+                        <option value="1">{% trans "Front" %}</option>
+                        <option value="2">{% trans "Side" %}</option>
+                        <option value="3">{% trans "Back" %}</option>
 
                     </select>
 
                     <br/>
 
-                    Time:<br/>
+                    {% trans "Time" %}:<br/>
                     <select name="time" id="time">
-                        <option value="0:30">30 seconds</option>
-                        <option value="1:00">1 minute</option>
-                        <option value="2:00">2 minutes</option>
-                        <option value="5:00">5 minutes</option>
-                        <option value="10:00">10 minutes</option>
+                        <option value="0:30">{% trans "30 seconds" %}</option>
+                        <option value="1:00">{% trans "1 minute" %}</option>
+                        <option value="2:00">{% trans "2 minutes" %}</option>
+                        <option value="5:00">{% trans "5 minutes" %}</option>
+                        <option value="10:00">{% trans "10 minutes" %}</option>
                     </select>
                     <br/><br/>
 
@@ -163,10 +166,10 @@
                     <br/><br/> -->
 
                     <input type="hidden" name="imageType" value="bodyParts"/>
-                    <button class="btn btn-primary btn-block" type="submit">Start</button>
+                    <button class="btn btn-primary btn-block" type="submit">{% trans "Start" %}</button>
 
                     <br/><br/>
-                    NOTE: There aren't many images here yet. Other body parts coming soon(ish).
+                    {% trans "NOTE: There aren't many images here yet. Other body parts coming soon(ish)." %}
                 </form>
             </div>
 
@@ -177,45 +180,45 @@
 
             <div class="tab-pane" id="animals">
                 <form action="/startSession" method="get">
-                    <label>Type:</label>
+                    <label>{% trans "Type" %}:</label>
                     <select name="species">
-                        <option value="">All</option>
-                        <option value="1">Bird</option>
-                        <option value="2">Fish</option>
-                        <option value="3">Reptile/Amphibian</option>
-                        <option value="4">Bug</option>
-                        <option value="5">Mammal</option>
+                        <option value="">{% trans "All" %}</option>
+                        <option value="1">{% trans "Bird" %}</option>
+                        <option value="2">{% trans "Fish" %}</option>
+                        <option value="3">{% trans "Reptile/Amphibian" %}</option>
+                        <option value="4">{% trans "Bug" %}</option>
+                        <option value="5">{% trans "Mammal" %}</option>
                     </select>
 
                     <br/>
 
-                    <label>Category:</label>
+                    <label>{% trans "Category" %}:</label>
                     <select name="category">
-                        <option value="">All</option>
-                        <option value="1">Live</option>
-                        <option value="2">Skeletons & Bones</option>
+                        <option value="">{% trans "All" %}</option>
+                        <option value="1">{% trans "Live" %}</option>
+                        <option value="2">{% trans "Skeletons & Bones" %}</option>
                     </select>
 
                     <br/>
 
-                    <label>View:</label>
+                    <label>{% trans "View" %}:</label>
                     <select name="view">
-                        <option value="">All</option>
-                        <option value="1">Front</option>
-                        <option value="2">Side</option>
-                        <option value="3">Back</option>
-                        <option value="4">Above/Below</option>
+                        <option value="">{% trans "All" %}</option>
+                        <option value="1">{% trans "Front" %}</option>
+                        <option value="2">{% trans "Side" %}</option>
+                        <option value="3">{% trans "Back" %}</option>
+                        <option value="4">{% trans "Above/Below" %}</option>
                     </select>
 
                     <br/>
 
-                    <label>Time:</label>
+                    <label>{% trans "Time" %}:</label>
                     <select name="time" id="time">
-                        <option value="0:30">30 seconds</option>
-                        <option value="1:00">1 minute</option>
-                        <option value="2:00">2 minutes</option>
-                        <option value="5:00">5 minutes</option>
-                        <option value="10:00">10 minutes</option>
+                        <option value="0:30">{% trans "30 seconds" %}</option>
+                        <option value="1:00">{% trans "1 minute" %}</option>
+                        <option value="2:00">{% trans "2 minutes" %}</option>
+                        <option value="5:00">{% trans "5 minutes" %}</option>
+                        <option value="10:00">{% trans "10 minutes" %}</option>
                     </select>
                     <br/><br/>
 
@@ -227,13 +230,13 @@
                     <br/><br/> -->
 
                     <input type="hidden" name="imageType" value="animals"/>
-                    <button class="btn btn-primary btn-block" type="submit">Start</button>
+                    <button class="btn btn-primary btn-block" type="submit">{% trans "Start" %}</button>
                 </form>
 
             </div>
         </div>
-            <div>Number of Images: <img src="/static/ajaxLoading.gif" id="loadingImage" class="hidden"/><span id="count"></span></div>
-            <div id="contactUs"><a href="mailto:artomizer@sketchdaily.net">Contact us</a> to report issues, suggest improvements or find out how you can help!</div>
+            <div>{% trans "Number of Images" %}: <img src="/static/ajaxLoading.gif" id="loadingImage" class="hidden"/><span id="count"></span></div>
+            <div id="contactUs">{% blocktrans %}<a href="mailto:artomizer@sketchdaily.net">Contact us</a> to report issues, suggest improvements or find out how you can help!{% endblocktrans %}</div>
         </div> <!-- span4 -->
         </div> <!-- row -->
     </div>
