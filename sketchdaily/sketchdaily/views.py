@@ -6,13 +6,23 @@ from sketchdaily.models import *
 from django.core import serializers
 from datetime import *
 from django.utils.translation import activate
+from django.utils.translation import get_language_info
 import json
 
 
 def index(request):
+    languageOptions = getLanguageOptions()
     request.session.clear()
-    return render_to_response('index.html', {}, context_instance=RequestContext(request))
+    return render_to_response('index.html', {'languageOptions': languageOptions}, context_instance=RequestContext(request))
 
+
+def getLanguageOptions():
+    languageOptions = []
+    languages = ('en', 'de', 'ru', 'sv')
+    for language in languages:
+        option = {'code': language, 'name': get_language_info(language)['name_local']}
+        languageOptions.append(option)
+    return languageOptions
 
 def help(request):
     return render_to_response('help.html', {}, context_instance=RequestContext(request))

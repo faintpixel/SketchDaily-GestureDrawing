@@ -13,8 +13,14 @@
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
-        <a class="brand" href="#">{% trans "r/SketchDaily References" %}</a>
-
+            <a class="brand" href="#">{% trans "r/SketchDaily References" %}</a>
+            <div id="languageContainer">Language:
+                <select id="languageSelector">
+                    {% for language in languageOptions %}
+                        <option value="{{ language.code }}">{{ language.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
         </div>
     </div>
 </div>
@@ -93,7 +99,7 @@
                     </select>
                     <br/>
 
-                    {% trans "Time" %}Time:<br/>
+                    {% trans "Time" %}:<br/>
                     <select name="time" id="time">
                         <option value="0:30">{% trans "30 seconds" %}</option>
                         <option value="1:00">{% trans "1 minute" %}</option>
@@ -249,6 +255,13 @@
 <script type="text/javascript">
 
     $(document).ready(function(){
+        var currentLanguage = "{{ LANGUAGE_CODE }}";
+        $("#languageSelector").val(currentLanguage);
+        $("#languageSelector").change(function() {
+            var language = $("#languageSelector").val();
+            window.location.href = "/" + language;
+        });
+
         ShowOrHideNSFWDiv();
         $('#clothing').change(function() {
             ShowOrHideNSFWDiv();
@@ -264,9 +277,6 @@
         $('a[data-toggle="tab"]').on('shown', function (e) {
             updateImageCount();
         });
-
-
-
     });
 
     function updateImageCount(){

@@ -69,6 +69,26 @@ body
     margin-bottom: 15px;
 }
 
+#languageContainer {
+    float: right;
+    padding-right: 40px;
+    padding-top: 10px;
+    font-size: smaller;
+    color: grey;
+}
+
+#languageSelector {
+    background-color: black;
+    color: grey;
+    font-size: small;
+    width: 120px;
+    height: 22px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    margin-bottom: 2px;
+}
+
 @media all and (max-width: 560px)
 {
     #pageTitle

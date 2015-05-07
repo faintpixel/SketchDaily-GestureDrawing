@@ -121,8 +121,6 @@ INSTALLED_APPS = (
     'sketchdaily'
 )
 
-DEBUG=False
-
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
 # the site admins on every HTTP 500 error when DEBUG=False.
@@ -156,10 +154,10 @@ LOGGING = {
 from django.utils.translation import ugettext_lazy as _
 LANGUAGES = (
     ('en', _('English')),
-    #('sv', _('Swedish')),
+    ('sv', _('Swedish')),
     #('fr', _('French')),
-    #('de', _('German')),
-    #('ru', _('Russian')),
+    ('de', _('German')),
+    ('ru', _('Russian')),
     #('es', _('Spanish')),
     #('ko', _('Korean')),
     #('ja', _('Japanese')),
