@@ -12,11 +12,11 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'zzzz',                      # Or path to database file if using sqlite3.
-        'USER': 'zzzz',                      # Not used with sqlite3.
-        'PASSWORD': 'zzzz',                  # Not used with sqlite3.
-        'HOST': 'zzzz',                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': 'zzzz',                      # Set to empty string for default. Not used with sqlite3.
+        'NAME': 'zzzzz',                      # Or path to database file if using sqlite3.
+        'USER': 'zzzzz',                      # Not used with sqlite3.
+        'PASSWORD': 'zzzzz',                  # Not used with sqlite3.
+        'HOST': 'zzzzz',                      # Set to empty string for localhost. Not used with sqlite3.
+        'PORT': 'zzzzz',                      # Set to empty string for default. Not used with sqlite3.
     }
 }
 
@@ -150,12 +150,11 @@ LOGGING = {
     }
 }
 
-
 from django.utils.translation import ugettext_lazy as _
 LANGUAGES = (
     ('en', _('English')),
     ('sv', _('Swedish')),
-    #('fr', _('French')),
+    ('fr', _('French')),
     ('de', _('German')),
     ('ru', _('Russian')),
     #('es', _('Spanish')),
@@ -166,5 +165,4 @@ LANGUAGES = (
     #('hi', _('Hindi')),
 )
 
-text_x = 'C:\\src\\github\\SketchDaily-GestureDrawing\\sketchdaily\\sketchdaily\\locale\\'
 LOCALE_PATHS = (os.path.join(os.path.dirname(__file__), 'locale').replace('\\','/'),)

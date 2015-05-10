@@ -152,8 +152,8 @@ msgid "What's New"
 msgstr "Was gibt's Neues"
 
 #: .\templates\index.html:30
-msgid "May 6 2015"
-msgstr "6. Mai 2015"
+msgid "May 9 2015"
+msgstr "9. Mai 2015"
 
 #: .\templates\index.html:32
 msgid ""

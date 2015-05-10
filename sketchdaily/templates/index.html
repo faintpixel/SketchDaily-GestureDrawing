@@ -8,13 +8,14 @@
     <title>{% trans "SketchDaily Gesture/Figure Drawing" %}</title>
     <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link rel="stylesheet" type="text/css" href="/static/style.css" />
+    <link rel="stylesheet" type="text/css" href="/static/style-{{ LANGUAGE_CODE }}.css" />
 </head>
 <body id="mainPageBody">
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
             <a class="brand" href="#">{% trans "r/SketchDaily References" %}</a>
-            <div id="languageContainer">Language:
+            <div id="languageContainer">
                 <select id="languageSelector">
                     {% for language in languageOptions %}
                         <option value="{{ language.code }}">{{ language.name }}</option>
@@ -33,7 +34,7 @@
                 <h4><a href="help">{% trans "Want to help make this site better?" %}</a></h4>
                 <div id="news">
                     <h1>{% trans "What's New" %}</h1>
-                    <b>{% trans "May 6 2015" %}</b>
+                    <b>{% trans "May 9 2015" %}</b>
                     <ul>
                         <li>{% blocktrans %}Added new languages for the site. <a href="mailto:artomizer@sketchdaily.net">Please let us know</a> if anything isn't working right or if translations are incorrect.{% endblocktrans %}</li>
                     </ul>
@@ -62,7 +63,7 @@
 
         <div class="tab-content">
             <div class="tab-pane active" id="fullBody">
-                <form action="/startSession" method="get">
+                <form action="/{{ LANGUAGE_CODE }}/startSession" method="get">
                     {% trans "Gender" %}:<br/>
                     <select name="gender">
                         <option value="">{% trans "Both" %}</option>
@@ -124,7 +125,7 @@
 
 
             <div class="tab-pane" id="bodyParts">
-                <form action="/startSession" method="get">
+                <form action="/{{ LANGUAGE_CODE }}/startSession" method="get">
                     {% trans "Part" %}:<br/>
                     <select name="bodyPart">
                         <option value="">{% trans "All" %}</option>
@@ -185,7 +186,7 @@
 
 
             <div class="tab-pane" id="animals">
-                <form action="/startSession" method="get">
+                <form action="/{{ LANGUAGE_CODE }}/startSession" method="get">
                     <label>{% trans "Type" %}:</label>
                     <select name="species">
                         <option value="">{% trans "All" %}</option>

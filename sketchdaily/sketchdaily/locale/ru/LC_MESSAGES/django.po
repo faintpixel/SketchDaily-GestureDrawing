@@ -15,19 +15,19 @@ msgstr ""
 
 #: .\sketchdaily\settings.py:156
 msgid "English"
-msgstr ""
+msgstr "Английский"
 
 #: .\sketchdaily\settings.py:157
 msgid "Swedish"
-msgstr ""
+msgstr "Шведский"
 
 #: .\sketchdaily\settings.py:158
 msgid "Portuguese (Brazil)"
-msgstr ""
+msgstr "Португальский (Бразилия)"
 
 #: .\sketchdaily\settings.py:159
 msgid "Catalan"
-msgstr ""
+msgstr "Каталанский"
 
 #: .\templates\error.html:8 .\templates\imageViewer.html:8
 #: .\templates\index.html:8
@@ -37,7 +37,7 @@ msgstr "Рисование Фигур/Зарисовок SketchDaily"
 #: .\templates\error.html:17 .\templates\imageViewer.html:16
 #: .\templates\index.html:16
 msgid "r/SketchDaily References"
-msgstr "Примеры Для Рисования r/SketchDaily"
+msgstr "Помощь Для Рисования С Натуры r/SketchDaily"
 
 #: .\templates\error.html:25
 msgid "Oh no, it broke!"
@@ -77,7 +77,7 @@ msgstr "Условия Использованя"
 
 #: .\templates\imageViewer.html:60
 msgid "Please view the full terms here."
-msgstr "Пожалуйста, прочитайте условия использования здесь."
+msgstr "Пожалуйста, прочитайте условия использования тут."
 
 #: .\templates\imageViewer.html:64 .\templates\imageViewer.html.py:86
 msgid "Close"
@@ -124,7 +124,7 @@ msgid ""
 "<a href=\"mailto:artomizer@sketchdaily.net\">Contact Us</a> to report issues "
 "or suggest improvements!"
 msgstr ""
-"<a href=\"mailto:artomizer@sketchdaily.net\">Пишите Нам</a> чтобы сообщить о проблеме, "
+"<a href=\"mailto:artomizer@sketchdaily.net\">Пишите Нам</a> чтобы сообщить о проблемах, "
 "или предложить улучшения! (англ)"
 
 #: .\templates\imageViewer.html:83
@@ -156,8 +156,8 @@ msgid "What's New"
 msgstr "Что Нового"
 
 #: .\templates\index.html:30
-msgid "May 6 2015"
-msgstr "6 Мая 2015"
+msgid "May 9 2015"
+msgstr "9 Мая 2015"
 
 #: .\templates\index.html:32
 msgid ""
@@ -166,7 +166,7 @@ msgid ""
 "are incorrect."
 msgstr ""
 "Добавлены Новые Языки. <a href=\"mailto:artomizer@sketchdaily.net"
-"\">Дайте нам знать</a> если что-то не работает, или перевод"
+"\">Дайте нам знать</a> если что-то не работает, или перевод "
 "неверный."
 
 #: .\templates\index.html:34
@@ -184,8 +184,8 @@ msgid ""
 "We recently got permission to use several new batches of images, so expect "
 "to see some of those popping up soon."
 msgstr ""
-"Мы недавно получили разрешение использовать несколько партий новых фотографий, так что ожидайте"
-"вскоре их увидеть."
+"Мы недавно получили разрешение использовать несколько партий новых фотографий, так что скоро ожидайте "
+"их увидеть."
 
 #: .\templates\index.html:39
 msgid "May 12 2014"
@@ -198,7 +198,7 @@ msgid ""
 "down for a few more days while we iron out some more kinks."
 msgstr ""
 "Простите за простой! Мы сменили хостинг, это должно исправить "
-"кое-какие недавние проблемы, и загружать быстрее. Сайт может работать и"
+"кое-какие недавние проблемы, и загружать сайт быстрее. Сайт может работать и "
 "не работать несколько дней, пока мы обрабатываем проблемы."
 
 #: .\templates\index.html:43
@@ -209,7 +209,7 @@ msgstr "17 ноября 2013"
 msgid ""
 "Added an option to only use the most recent images for the full body section."
 msgstr ""
-"Добавлена возможность использовать только недавние картинки для секции целого тела."
+"Добавлена возможность использовать только недавние картинки для раздела 'целое тело'."
 
 #: .\templates\index.html:47
 msgid "View change history"
@@ -234,7 +234,7 @@ msgstr "Пол"
 #: .\templates\index.html:62 .\templates\index.html.py:70
 #: .\templates\index.html:81 .\templates\index.html.py:133
 msgid "Both"
-msgstr "Оба"
+msgstr "Bce"
 
 #: .\templates\index.html:63 .\templates\index.html.py:134
 msgid "Male"
@@ -352,7 +352,7 @@ msgstr "Головы"
 msgid ""
 "NOTE: There aren't many images here yet. Other body parts coming soon(ish)."
 msgstr ""
-"Заметка: Здесь пока немного картиник. Другие частит ела будут скоро (наверно)."
+"Заметка: Здесь пока немного картинок. Другие части тела будут скоро (наверно)."
 
 #: .\templates\index.html:183
 msgid "Type"
@@ -403,5 +403,5 @@ msgid ""
 "<a href=\"mailto:artomizer@sketchdaily.net\">Contact us</a> to report "
 "issues, suggest improvements or find out how you can help!"
 msgstr ""
-"<a href=\"mailto:artomizer@sketchdaily.net\">Пишите нам</a> чтобы сообщить о"
-"проблемых, предложить улучшение, или узнать как вы можете помочь!"
+"<a href=\"mailto:artomizer@sketchdaily.net\">Пишите нам</a> чтобы сообщить о "
+"проблемах, предложить улучшения, или узнать как вы можете помочь!"

@@ -1,4 +1,5 @@
 # initial translation by Bewinged (May 7, 2015)
+# double checked by figauro (May 8, 2015)
 
 msgid ""
 msgstr ""
@@ -156,8 +157,8 @@ msgid "What's New"
 msgstr "Det Senaste"
 
 #: .\templates\index.html:30
-msgid "May 6 2015"
-msgstr "6 Maj 2015"
+msgid "May 9 2015"
+msgstr "9 Maj 2015"
 
 #: .\templates\index.html:32
 msgid ""
