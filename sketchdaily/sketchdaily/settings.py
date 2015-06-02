@@ -12,11 +12,11 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'zzzzz',                      # Or path to database file if using sqlite3.
-        'USER': 'zzzzz',                      # Not used with sqlite3.
-        'PASSWORD': 'zzzzz',                  # Not used with sqlite3.
-        'HOST': 'zzzzz',                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': 'zzzzz',                      # Set to empty string for default. Not used with sqlite3.
+        'NAME': 'zzzz',                      # Or path to database file if using sqlite3.
+        'USER': 'zzzz',                      # Not used with sqlite3.
+        'PASSWORD': 'zzzz',                  # Not used with sqlite3.
+        'HOST': 'zzzz',                      # Set to empty string for localhost. Not used with sqlite3.
+        'PORT': 'zzzz',                      # Set to empty string for default. Not used with sqlite3.
     }
 }
 
@@ -157,12 +157,14 @@ LANGUAGES = (
     ('fr', _('French')),
     ('de', _('German')),
     ('ru', _('Russian')),
+    ('nl', _('Dutch')),
     #('es', _('Spanish')),
     #('ko', _('Korean')),
     #('ja', _('Japanese')),
     #('zh', _('Chinese')),
     #('ar', _('Arabic')),
     #('hi', _('Hindi')),
+    #('id', _('Indonesian')),
 )
 
 LOCALE_PATHS = (os.path.join(os.path.dirname(__file__), 'locale').replace('\\','/'),)

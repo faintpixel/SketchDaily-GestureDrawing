@@ -1,175 +1,132 @@
-# Initial translation by Pyoh (May 9, 2015)
-# Additional translations/proof reading by:
-# <name> (date)
-# <name> (date)
-# <name> (date)
-# <name> (date)
-msgid ""
-msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-09 18:29-0600\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\sketchdaily\settings.py:156
-msgid "English"
-msgstr ""
-
-#: .\sketchdaily\settings.py:157
-msgid "Swedish"
-msgstr ""
-
-#: .\sketchdaily\settings.py:158
-msgid "French"
-msgstr ""
-
-#: .\sketchdaily\settings.py:159
-msgid "German"
-msgstr ""
-
-#: .\sketchdaily\settings.py:160
-msgid "Russian"
-msgstr ""
-
-#: .\sketchdaily\settings.py:161
-msgid "Spanish"
-msgstr ""
 
 #: .\templates\error.html:8 .\templates\imageViewer.html:8
 #: .\templates\index.html:8
 msgid "SketchDaily Gesture/Figure Drawing"
-msgstr "Sketchdaily - Dessin de geste/d'après modèle"
+msgstr ""
 
 #: .\templates\error.html:17 .\templates\imageViewer.html:16
 #: .\templates\index.html:17
 msgid "r/SketchDaily References"
-msgstr "r/SketchDaily Références"
+msgstr ""
 
 #: .\templates\error.html:25
 msgid "Oh no, it broke!"
-msgstr "Oh non, la page est cassée !"
+msgstr ""
 
 #: .\templates\error.html:27
 msgid "Return to main page!"
-msgstr "Revenir à la page principale !"
+msgstr ""
 
-#: .\templates\help.html:25 .\templates\history.html:25
+#: .\templates\history.html:25
 msgid "Sorry, this page is currently only available in english."
-msgstr "Désolé, cette page n'est disponible qu'en anglais pour l'instant."
+msgstr ""
 
 #: .\templates\imageViewer.html:49
 msgid "Image Info"
-msgstr "Informations de l'image"
+msgstr ""
 
 #: .\templates\imageViewer.html:52
 msgid "Source"
-msgstr "Source"
+msgstr ""
 
 #: .\templates\imageViewer.html:53
 msgid "Model"
-msgstr "Modèle"
+msgstr ""
 
 #: .\templates\imageViewer.html:54
 msgid "Photographer"
-msgstr "Photographe"
+msgstr ""
 
 #: .\templates\imageViewer.html:55
 msgid "Date Added"
-msgstr "Date d'ajout"
+msgstr ""
 
 #: .\templates\imageViewer.html:56
 msgid "Terms of Use"
-msgstr "Conditions d'utilisation"
+msgstr ""
 
 #: .\templates\imageViewer.html:60
 msgid "Please view the full terms here."
-msgstr "Veuillez voir toutes les conditions ici."
+msgstr ""
 
 #: .\templates\imageViewer.html:64 .\templates\imageViewer.html.py:86
 msgid "Close"
-msgstr "Fermer"
+msgstr ""
 
 #: .\templates\imageViewer.html:71
 msgid "About"
-msgstr "A propos"
+msgstr ""
 
 #: .\templates\imageViewer.html:74
 msgid "Left"
-msgstr "Gauche"
+msgstr ""
 
 #: .\templates\imageViewer.html:74
 msgid "Previous image"
-msgstr "Image précédente"
+msgstr ""
 
 #: .\templates\imageViewer.html:75
 msgid "Right"
-msgstr "Droite"
+msgstr ""
 
 #: .\templates\imageViewer.html:75
 msgid "Next image"
-msgstr "Image suivante"
+msgstr ""
 
 #: .\templates\imageViewer.html:76
 msgid "Spacebar"
-msgstr "Barre d'espace"
+msgstr ""
 
 #: .\templates\imageViewer.html:76
 msgid "Pause"
-msgstr "Pauser"
+msgstr ""
 
 #: .\templates\imageViewer.html:77
 msgid "Escape"
-msgstr "Quitter"
+msgstr ""
 
 #: .\templates\imageViewer.html:77
 msgid "Stop"
-msgstr "Arrêter"
+msgstr ""
 
 #: .\templates\imageViewer.html:81
 msgid ""
 "<a href=\"mailto:artomizer@sketchdaily.net\">Contact Us</a> to report issues "
 "or suggest improvements!"
 msgstr ""
-"<a href=\"mailto:artomizer@sketchdaily.net\">Contactez-nous</a> pour "
-"signaler des problèmes ou suggérer des améliorations !"
 
 #: .\templates\imageViewer.html:83
 msgid "Visit us on reddit!"
-msgstr "Visitez-nous sur reddit !"
+msgstr ""
 
 #: .\templates\index.html:31
 msgid "Hello!"
-msgstr "Bonjour !"
+msgstr ""
 
 #: .\templates\index.html:32
 msgid "Welcome to the SketchDaily reference doohickey."
-msgstr "Bienvenue sur le site de références de SketchDaily."
+msgstr ""
 
 #: .\templates\index.html:33
 msgid "Looking for something else to draw?"
-msgstr "Envie de dessiner autre chose ?"
+msgstr ""
 
 #: .\templates\index.html:33
 msgid "Join the fun!"
-msgstr "Rejoignez-nous !"
+msgstr ""
 
 #: .\templates\index.html:34
 msgid "Want to help make this site better?"
-msgstr "Voulez-vous aider à améliorer ce site ?"
+msgstr ""
 
 #: .\templates\index.html:36
 msgid "What's New"
-msgstr "Quoi de neuf"
+msgstr ""
 
 #: .\templates\index.html:37
 msgid "May 9 2015"
-msgstr "9 Mai 2015"
+msgstr ""
 
 #: .\templates\index.html:39
 msgid ""
@@ -177,32 +134,25 @@ msgid ""
 "\">Please let us know</a> if anything isn't working right or if translations "
 "are incorrect."
 msgstr ""
-"Ajout de nouveaux langages au site. <a href=\"mailto:artomizer@sketchdaily."
-"net\">S'il vous plaît, veuillez nous indiquer</a> si quelque chose ne marche "
-"pas ou si des traductions sont incorrectes."
 
 #: .\templates\index.html:41
 msgid "May 22 2014"
-msgstr "22 Mai 2014"
+msgstr ""
 
 #: .\templates\index.html:43
 msgid ""
 "Fixed a bug which was causing issues with the 'only recent images' option."
 msgstr ""
-"Correction d'un bug qui causait des problèmes avec l'option 'Récentes images "
-"seulement'."
 
 #: .\templates\index.html:44
 msgid ""
 "We recently got permission to use several new batches of images, so expect "
 "to see some of those popping up soon."
 msgstr ""
-"Nous avons reçu récemment la permission d'utiliser plusieurs lots d'images, "
-"attendez-vous à voir certaines d'entre elles apparaitre bientôt. "
 
 #: .\templates\index.html:46
 msgid "May 12 2014"
-msgstr "12 Mai 2014"
+msgstr ""
 
 #: .\templates\index.html:48
 msgid ""
@@ -210,215 +160,204 @@ msgid ""
 "problems we've had lately, as well as run faster. The site might be up and "
 "down for a few more days while we iron out some more kinks."
 msgstr ""
-"Désolé pour notre indisponibilité ! Nous avons déménagé sur un nouvel "
-"hébergeur, ce qui devrait corriger quelques problèmes récents, ainsi qu'une "
-"rapidité accrue du site. Le site aura encore des hauts et des bas pendant "
-"quelques jours pendant que nous nous occupons de quelques pépins."
 
 #: .\templates\index.html:50
 msgid "November 17 2013"
-msgstr "17 Novembre 2013"
+msgstr ""
 
 #: .\templates\index.html:52
 msgid ""
 "Added an option to only use the most recent images for the full body section."
 msgstr ""
-"Ajout d'une option pour ne voir que les images récentes pour la section "
-"Corps entier. "
 
 #: .\templates\index.html:54
 msgid "View change history"
-msgstr "Voir l'historique de changements"
+msgstr ""
 
 #: .\templates\index.html:59
 msgid "Full Body"
-msgstr "Corps entier"
+msgstr ""
 
 #: .\templates\index.html:60
 msgid "Body Parts"
-msgstr "Parties du corps"
+msgstr ""
 
 #: .\templates\index.html:61
 msgid "Animals"
-msgstr "Animaux"
+msgstr ""
 
 #: .\templates\index.html:67 .\templates\index.html.py:138
 msgid "Gender"
-msgstr "Genre"
+msgstr ""
 
 #: .\templates\index.html:69 .\templates\index.html.py:77
 #: .\templates\index.html:88 .\templates\index.html.py:140
 msgid "Both"
-msgstr "Les deux"
+msgstr ""
 
 #: .\templates\index.html:70 .\templates\index.html.py:141
 msgid "Male"
-msgstr "Mâle"
+msgstr ""
 
 #: .\templates\index.html:71 .\templates\index.html.py:142
 msgid "Female"
-msgstr "Femelle"
+msgstr ""
 
 #: .\templates\index.html:75
 msgid "Clothing"
-msgstr "Habillement"
+msgstr ""
 
 #: .\templates\index.html:78
 msgid "Clothed"
-msgstr "Habillé"
+msgstr ""
 
 #: .\templates\index.html:79
 msgid "Nude"
-msgstr "Nu"
+msgstr ""
 
 #: .\templates\index.html:83
 msgid "Include NSFW images"
-msgstr "Inclure les images NSFW"
+msgstr ""
 
 #: .\templates\index.html:86
 msgid "Pose"
-msgstr "Pose"
+msgstr ""
 
 #: .\templates\index.html:89
 msgid "Action"
-msgstr "Action"
+msgstr ""
 
 #: .\templates\index.html:90
 msgid "Stationary"
-msgstr "Stationnaire"
+msgstr ""
 
 #: .\templates\index.html:94 .\templates\index.html.py:211
 msgid "View"
-msgstr "Vue"
+msgstr ""
 
 #: .\templates\index.html:96 .\templates\index.html.py:131
 #: .\templates\index.html:148 .\templates\index.html.py:192
 #: .\templates\index.html:204 .\templates\index.html.py:213
 msgid "All"
-msgstr "Toute"
+msgstr ""
 
 #: .\templates\index.html:97 .\templates\index.html.py:149
 #: .\templates\index.html:214
 msgid "Front"
-msgstr "De devant"
+msgstr ""
 
 #: .\templates\index.html:98 .\templates\index.html.py:150
 #: .\templates\index.html:215
 msgid "Side"
-msgstr "De côté"
+msgstr ""
 
 #: .\templates\index.html:99 .\templates\index.html.py:151
 #: .\templates\index.html:216
 msgid "Back"
-msgstr "De derrière"
+msgstr ""
 
 #: .\templates\index.html:103 .\templates\index.html.py:157
 #: .\templates\index.html:222
 msgid "Time"
-msgstr "Temps"
+msgstr ""
 
 #: .\templates\index.html:105 .\templates\index.html.py:159
 #: .\templates\index.html:224
 msgid "30 seconds"
-msgstr "30 secondes"
+msgstr ""
 
 #: .\templates\index.html:106 .\templates\index.html.py:160
 #: .\templates\index.html:225
 msgid "1 minute"
-msgstr "1 minute"
+msgstr ""
 
 #: .\templates\index.html:107 .\templates\index.html.py:161
 #: .\templates\index.html:226
 msgid "2 minutes"
-msgstr "2 minutes"
+msgstr ""
 
 #: .\templates\index.html:108 .\templates\index.html.py:162
 #: .\templates\index.html:227
 msgid "5 minutes"
-msgstr "5 minutes"
+msgstr ""
 
 #: .\templates\index.html:109 .\templates\index.html.py:163
 #: .\templates\index.html:228
 msgid "10 minutes"
-msgstr "10 minutes"
+msgstr ""
 
 #: .\templates\index.html:113
 msgid "Only use most recent images"
-msgstr "Utiliser seulement les images les plus récentes"
+msgstr ""
 
 #: .\templates\index.html:117 .\templates\index.html.py:176
 #: .\templates\index.html:240
 msgid "Start"
-msgstr "Commencer"
+msgstr ""
 
 #: .\templates\index.html:129
 msgid "Part"
-msgstr "Partie"
+msgstr ""
 
 #: .\templates\index.html:132
 msgid "Hands"
-msgstr "Mains"
+msgstr ""
 
 #: .\templates\index.html:134
 msgid "Heads"
-msgstr "Têtes"
+msgstr ""
 
 #: .\templates\index.html:179
 msgid ""
 "NOTE: There aren't many images here yet. Other body parts coming soon(ish)."
 msgstr ""
-"Remarque : Il n'y a que peu d'images ici pour le moment. D'autres parties du "
-"corps seront rajoutées d'ici peu. "
 
 #: .\templates\index.html:190
 msgid "Type"
-msgstr "Type"
+msgstr ""
 
 #: .\templates\index.html:193
 msgid "Bird"
-msgstr "Oiseau"
+msgstr ""
 
 #: .\templates\index.html:194
 msgid "Fish"
-msgstr "Poisson"
+msgstr ""
 
 #: .\templates\index.html:195
 msgid "Reptile/Amphibian"
-msgstr "Reptile/Amphibien"
+msgstr ""
 
 #: .\templates\index.html:196
 msgid "Bug"
-msgstr "Insecte"
+msgstr ""
 
 #: .\templates\index.html:197
 msgid "Mammal"
-msgstr "Mammifère"
+msgstr ""
 
 #: .\templates\index.html:202
 msgid "Category"
-msgstr "Catégorie"
+msgstr ""
 
 #: .\templates\index.html:205
 msgid "Live"
-msgstr "Vivant"
+msgstr ""
 
 #: .\templates\index.html:206
 msgid "Skeletons & Bones"
-msgstr "Squelettes et Os"
+msgstr ""
 
 #: .\templates\index.html:217
 msgid "Above/Below"
-msgstr "De dessus/dessous"
+msgstr ""
 
 #: .\templates\index.html:245
 msgid "Number of Images"
-msgstr "Nombre d'images"
+msgstr ""
 
 #: .\templates\index.html:246
 msgid ""
 "<a href=\"mailto:artomizer@sketchdaily.net\">Contact us</a> to report "
 "issues, suggest improvements or find out how you can help!"
 msgstr ""
-"<a href=\"mailto:artomizer@sketchdaily.net\">Contactez-nous</a> pour "
-"signaler des problèmes, suggérer des améliorations ou découvrir comment vous "
-"pouvez nous aider !"
