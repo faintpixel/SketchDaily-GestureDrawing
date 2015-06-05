@@ -271,7 +271,7 @@ msgstr "Statisch"
 
 #: .\templates\index.html:94 .\templates\index.html.py:211
 msgid "View"
-msgstr "Kijkpunt"
+msgstr "Perspectief"
 
 #: .\templates\index.html:96 .\templates\index.html.py:131
 #: .\templates\index.html:148 .\templates\index.html.py:192
