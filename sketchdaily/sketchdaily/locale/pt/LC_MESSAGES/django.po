@@ -121,7 +121,7 @@ msgstr "Olá!"
 
 #: .\templates\index.html:32
 msgid "Welcome to the SketchDaily reference doohickey."
-msgstr "Bem vindo as referências do SketchDaily"
+msgstr "Bem vindo ao SketchDaily 'Esboço Diário'"
 
 #: .\templates\index.html:33
 msgid "Looking for something else to draw?"
@@ -129,7 +129,7 @@ msgstr "Procurando algo para desenhar?"
 
 #: .\templates\index.html:33
 msgid "Join the fun!"
-msgstr "Aproveite!"
+msgstr "Aproveite e divirta-se!"
 
 #: .\templates\index.html:34
 msgid "Want to help make this site better?"
@@ -167,8 +167,8 @@ msgid ""
 "We recently got permission to use several new batches of images, so expect "
 "to see some of those popping up soon."
 msgstr ""
-"Nós recentemente conseguimos permissão para usar vários novos lotes de imagens, então podem aguardar "
-"para vê-las aparecendo em breve."
+"Recentemente nós conseguimos permissão para usar vários novos lotes de imagens, então podem aguardar "
+"para vê-las aparecendo em breve no nosso site."
 
 #: .\templates\index.html:46
 msgid "May 12 2014"
@@ -180,9 +180,9 @@ msgid ""
 "problems we've had lately, as well as run faster. The site might be up and "
 "down for a few more days while we iron out some more kinks."
 msgstr ""
-"Desculpe-nos pelo tempo indisponível! Nós nos mudamos para um novo servidor, que deve solucionar alguns "
+"Desculpe-nos pelo tempo indisponível! Mudamos para um novo servidor que deve solucionar alguns "
 "problemas que estávamos tendo ultimamente, o mais rápido que puderem. O site pode ter altos e "
-"baixos por mais aguns dias enquanto concertamos mais alguns pequenos erros."
+"baixos por mais aguns dias enquanto concertamos outros pequenos erros."
 
 #: .\templates\index.html:50
 msgid "November 17 2013"
@@ -191,7 +191,7 @@ msgstr "17 de Novembro de 2013"
 #: .\templates\index.html:52
 msgid ""
 "Added an option to only use the most recent images for the full body section."
-msgstr "Adicionamos uma opção para somente usar as imagens mais recentes na seção de Corpos Inteiros"
+msgstr "Adicionamos a opção de somente usar as imagens mais recentes na seção 'Corpos Inteiros'"
 
 #: .\templates\index.html:54
 msgid "View change history"
@@ -262,7 +262,7 @@ msgstr "Visão"
 #: .\templates\index.html:148 .\templates\index.html.py:192
 #: .\templates\index.html:204 .\templates\index.html.py:213
 msgid "All"
-msgstr "Tudo"
+msgstr "Todas"
 
 #: .\templates\index.html:97 .\templates\index.html.py:149
 #: .\templates\index.html:214
