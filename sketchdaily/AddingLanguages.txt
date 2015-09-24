@@ -1,0 +1,7 @@
+$ python manage.py makemessages -l ca
+Fill in locale file
+
+$ python manage.py compilemessages -l ca
+add it to settings.py
+add it in views.py
+add custom style sheet

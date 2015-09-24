@@ -12,11 +12,11 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'zzzz',                      # Or path to database file if using sqlite3.
-        'USER': 'zzzz',                      # Not used with sqlite3.
-        'PASSWORD': 'zzzz',                  # Not used with sqlite3.
-        'HOST': 'zzzz',                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': 'zzzz',                      # Set to empty string for default. Not used with sqlite3.
+        'NAME': '***',                      # Or path to database file if using sqlite3.
+        'USER': '***',                      # Not used with sqlite3.
+        'PASSWORD': '***',                  # Not used with sqlite3.
+        'HOST': '***',                      # Set to empty string for localhost. Not used with sqlite3.
+        'PORT': '***',                      # Set to empty string for default. Not used with sqlite3.
     }
 }
 
@@ -157,6 +157,7 @@ LANGUAGES = (
     ('fr', _('French')),
     ('de', _('German')),
     ('ru', _('Russian')),
+    ('pt', _('Portuguese')),
     ('nl', _('Dutch')),
     #('es', _('Spanish')),
     #('ko', _('Korean')),
