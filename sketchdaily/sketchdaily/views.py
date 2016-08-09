@@ -18,7 +18,7 @@ def index(request):
 
 def getLanguageOptions():
     languageOptions = []
-    languages = ('en', 'de', 'nl', 'fr', 'pt', 'ru', 'sv')
+    languages = ('en', 'de', 'es', 'nl', 'fr', 'pt', 'ru', 'sv')
     for language in languages:
         option = {'code': language, 'name': get_language_info(language)['name_local']}
         languageOptions.append(option)

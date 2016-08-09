@@ -159,7 +159,7 @@ LANGUAGES = (
     ('ru', _('Russian')),
     ('pt', _('Portuguese')),
     ('nl', _('Dutch')),
-    #('es', _('Spanish')),
+    ('es', _('Spanish')),
     #('ko', _('Korean')),
     #('ja', _('Japanese')),
     #('zh', _('Chinese')),
